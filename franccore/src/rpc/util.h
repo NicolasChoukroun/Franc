@@ -2,10 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_UTIL_H
-#define BITCOIN_RPC_UTIL_H
+#ifndef FRANC_RPC_UTIL_H
+#define FRANC_RPC_UTIL_H
 
 #include <node/transaction.h>
+#include <outputtype.h>
 #include <pubkey.h>
 #include <rpc/protocol.h>
 #include <script/standard.h>
@@ -28,7 +29,7 @@ extern InitInterfaces* g_rpc_interfaces;
 
 CPubKey HexToPubKey(const std::string& hex_in);
 CPubKey AddrToPubKey(CKeyStore* const keystore, const std::string& addr_in);
-CScript CreateMultisigRedeemscript(const int required, const std::vector<CPubKey>& pubkeys);
+CTxDestination AddAndGetMultisigDestination(const int required, const std::vector<CPubKey>& pubkeys, OutputType type, CKeyStore& keystore, CScript& script_out);
 
 UniValue DescribeAddress(const CTxDestination& dest);
 
@@ -203,4 +204,4 @@ private:
     const RPCExamples m_examples;
 };
 
-#endif // BITCOIN_RPC_UTIL_H
+#endif // FRANC_RPC_UTIL_H

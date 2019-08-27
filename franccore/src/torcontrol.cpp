@@ -401,7 +401,7 @@ static bool WriteBinaryFile(const fs::path &filename, const std::string &data)
     return true;
 }
 
-/****** Bitcoin specific TorController implementation ********/
+/****** franc specific TorController implementation ********/
 
 /** Controller that connects to Tor control socket, authenticate, then create
  * and maintain an ephemeral hidden service.
@@ -759,7 +759,9 @@ void InterruptTorControl()
 {
     if (gBase) {
         LogPrintf("tor: Thread interrupt\n");
-        event_base_loopbreak(gBase);
+        event_base_once(gBase, -1, EV_TIMEOUT, [](evutil_socket_t, short, void*) {
+            event_base_loopbreak(gBase);
+        }, nullptr, nullptr);
     }
 }
 

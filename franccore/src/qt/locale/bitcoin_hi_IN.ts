@@ -62,11 +62,11 @@
         <translation>पतों को प्राप्त कर रहा है</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your franc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>ये भुगतान भेजने के लिए ये आपके बिटकॉइन पते हैं। हमेशा सिक्के भेजने से पहले राशि और प्राप्तकर्ता पते की जांच करें।</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your franc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>भुगतान प्राप्त करने के लिए ये आपके बीटकोइन पते हैं प्रत्येक लेनदेन के लिए एक नया प्राप्त पता उपयोग करने की सिफारिश की जाती है।</translation>
     </message>
     <message>
@@ -132,15 +132,43 @@
         <translation>वॉलेट एन्क्रिप्ट करें</translation>
     </message>
     <message>
+        <source>Unlock wallet</source>
+        <translation>बटुए को अनलॉक करें</translation>
+    </message>
+    <message>
+        <source>Decrypt wallet</source>
+        <translation>वॉलेट को डिक्रिप्ट करें</translation>
+    </message>
+    <message>
         <source>Change passphrase</source>
         <translation>पासफ़्रेज़ बदलें</translation>
+    </message>
+    <message>
+        <source>Confirm wallet encryption</source>
+        <translation>वॉलेट एन्क्रिप्शन की पुष्टि करें</translation>
+    </message>
+    <message>
+        <source>Wallet encrypted</source>
+        <translation>वॉलेट को एन्क्रिप्ट किया गया है</translation>
+    </message>
+    <message>
+        <source>Wallet encryption failed</source>
+        <translation>वॉलेट एन्क्रिप्शन विफल रहा</translation>
+    </message>
+    <message>
+        <source>Wallet unlock failed</source>
+        <translation>वॉलेट अनलॉक विफल रहा</translation>
+    </message>
+    <message>
+        <source>Wallet decryption failed</source>
+        <translation>वॉलेट डिक्रिप्शन विफल रहा</translation>
     </message>
     </context>
 <context>
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>francGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>नेटवर्क से समकालिक (मिल) रहा है ...</translation>
@@ -183,7 +211,7 @@
         <translation>पहचान शब्द/अक्षर जो वॉलेट एनक्रिपशन के लिए इस्तेमाल किया है उसे बदलिए!</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>franc</source>
         <translation>बीटकोइन</translation>
     </message>
     <message>
@@ -290,7 +318,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>franc</source>
         <translation>बीटकोइन</translation>
     </message>
     <message>
@@ -576,7 +604,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>franc-core</name>
     <message>
         <source>Verifying blocks...</source>
         <translation>ब्लॉक्स जाँचे जा रहा है...</translation>

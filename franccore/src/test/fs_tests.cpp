@@ -17,13 +17,13 @@ BOOST_AUTO_TEST_CASE(fsbridge_fstream)
     fs::path tmpfile2 = tmpfolder / L"fs_tests_₿_🏃";
     {
         fsbridge::ofstream file(tmpfile1);
-        file << "bitcoin";
+        file << "franc";
     }
     {
         fsbridge::ifstream file(tmpfile2);
         std::string input_buffer;
         file >> input_buffer;
-        BOOST_CHECK_EQUAL(input_buffer, "bitcoin");
+        BOOST_CHECK_EQUAL(input_buffer, "franc");
     }
     {
         fsbridge::ifstream file(tmpfile1, std::ios_base::in | std::ios_base::ate);
@@ -39,17 +39,17 @@ BOOST_AUTO_TEST_CASE(fsbridge_fstream)
         fsbridge::ifstream file(tmpfile1);
         std::string input_buffer;
         file >> input_buffer;
-        BOOST_CHECK_EQUAL(input_buffer, "bitcointests");
+        BOOST_CHECK_EQUAL(input_buffer, "franctests");
     }
     {
         fsbridge::ofstream file(tmpfile2, std::ios_base::out | std::ios_base::trunc);
-        file << "bitcoin";
+        file << "franc";
     }
     {
         fsbridge::ifstream file(tmpfile1);
         std::string input_buffer;
         file >> input_buffer;
-        BOOST_CHECK_EQUAL(input_buffer, "bitcoin");
+        BOOST_CHECK_EQUAL(input_buffer, "franc");
     }
 }
 

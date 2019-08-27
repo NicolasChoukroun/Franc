@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2019 The Bitcoin Core developers
+// Copyright (c) 2018-2019 The Franc Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NET_H
-#define BITCOIN_NET_H
+#ifndef FRANC_NET_H
+#define FRANC_NET_H
 
 #include <addrdb.h>
 #include <addrman.h>
@@ -523,7 +524,7 @@ CAddress GetLocalAddress(const CNetAddr *paddrPeer, ServiceFlags nLocalServices)
 
 extern bool fDiscover;
 extern bool fListen;
-extern bool fRelayTxes;
+extern bool g_relay_txes;
 
 extern limitedmap<uint256, int64_t> mapAlreadyAskedFor;
 
@@ -888,4 +889,4 @@ public:
 /** Return a timestamp in the future (in microseconds) for exponentially distributed events. */
 int64_t PoissonNextSend(int64_t now, int average_interval_seconds);
 
-#endif // BITCOIN_NET_H
+#endif // FRANC_NET_H
