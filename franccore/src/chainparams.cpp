@@ -100,7 +100,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "30/05/2019 RT: Beijing has accused Washington of engaging in naked economic terrorism.";
-    const CScript genesisOutputScript = CScript() << ParseHex("04bff16e305296ab93ee46fad2593b3fc13261aff978bd02732012956d4e6ba2cdb30e168adfef3fb3770cdd1857e3d1ba86a55c8072ec8d343767158a781a7472") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("046f97a8ca2e3acc219671775ef19563dc1e0649d8ebd4b69c30b9e0dd924aae7a73d6a23b6270f52db2849450c8a7b5b90e16affb2328278524f1e174d72bf5d2") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 

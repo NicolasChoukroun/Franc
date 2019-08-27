@@ -1,4 +1,4 @@
-# Franc "The Original"
+# Franc "The financial Noah's Ark"
 
 Build:
 ```
@@ -56,7 +56,7 @@ openssl ec -in $PRIVATE_KEY -pubout -outform DER|tail -c 65|xxd -p -c 65 > $fran
 
 In call cases, the files are in the /binaries/ directory
 
-## English - Franc: The crypto that gives and keeps on giving
+## English - Franc: The rebirth of the French currency
 
 from http://Franc.eu.com/whitepapers.php
 
@@ -67,7 +67,7 @@ Bitcoin is the leading cryptocurrency with about 60% of all the crypto capitaliz
 
 The ₣ranc is a true Blockchain, with its own certificates, own genesis, and started from scratch with its own parameters. It is designed to model the ₣ranc as it was when it was stopped. Our goal is to reach the following value: 0.15 Eur = 1 FRANC. We will issue 85 Billions of ₣rancs in the next 100 years which will match with the Gold reserve from the Bank of ₣rance. This way, the ₣ranc can become some sort of collateral reserve of wealth where the French people can save their money from the current finantial system and be sure that their money is protected by the inovative technology that is the blockchain trust system, that no one can change or modify. In one word, the ₣ranc is designed to be a financial Noah's Ark, that can resist to any financial storm, and that guarantee that the ₣rancs you own are saved, even in a total financial collapse event.
 
-## French - Franc: La crypto qui donne et donne envie de donner
+## French - Franc: La renaissance de la monnaie Francaise.
 
 from http://Franc.com/whitepapers.php
 
