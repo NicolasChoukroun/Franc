@@ -1,12 +1,12 @@
-# KryptoFranc "The Popular"
+# Franc "The Original"
 
 Build:
 ```
-git clone https://github.com/NicolasChoukroun/Kryptofranc
+git clone https://github.com/NicolasChoukroun/Franc
 ---------------------------
 Unix: 
-chmod -R 777 KryptoFranc
-cd KryptoFranc
+chmod -R 777 Franc
+cd Franc
 ./maker.sh unix install
 ./maker.sh unix all
 # then you can compile doing only
@@ -14,8 +14,8 @@ cd KryptoFranc
 
 -------------------------
 Windows (using windows ubuntu subsystem):
-chmod -R 777 KryptoFranc
-cd KryptoFranc
+chmod -R 777 Franc
+cd Franc
 ./maker.sh win64 install
 ./maker.sh win64 all
 # then you can compile doing only
@@ -23,8 +23,8 @@ cd KryptoFranc
 
 -------------------------
 MAC:
-chmod -R 777 KryptoFranc
-cd KryptoFranc
+chmod -R 777 Franc
+cd Franc
 ./maker.sh osx install
 ./maker.sh osx all
 # then you can compile doing only
@@ -41,46 +41,42 @@ Generate keys:
 ```
 PRIVATE_KEY="privatekey.txt"
 PUBLIC_KEY="publickey.txt"
-KYF_PRIVATE_KEY="kyfprivatekey.txt"
-KYF_PUBLIC_KEY="kyfpublickey.txt"
+franc_PRIVATE_KEY="francprivatekey.txt"
+franc_PUBLIC_KEY="francpublickey.txt"
 echo "Generating private key"
 openssl ecparam -genkey -name secp256k1 -rand /dev/urandom -out $PRIVATE_KEY
 echo "Generating public key"
 openssl ec -in $PRIVATE_KEY -pubout -out $PUBLIC_KEY
-echo "Generating Kryptofranc private key"
-openssl ec -in $PRIVATE_KEY -outform DER|tail -c +8|head -c 32|xxd -p -c 32 > $KYF_PRIVATE_KEY
-echo "Generating Kryptofranc public key"
-openssl ec -in $PRIVATE_KEY -pubout -outform DER|tail -c 65|xxd -p -c 65 > $KYF_PUBLIC_KEY
+echo "Generating Franc private key"
+openssl ec -in $PRIVATE_KEY -outform DER|tail -c +8|head -c 32|xxd -p -c 32 > $franc_PRIVATE_KEY
+echo "Generating Franc public key"
+openssl ec -in $PRIVATE_KEY -pubout -outform DER|tail -c 65|xxd -p -c 65 > $franc_PUBLIC_KEY
 ```
 
 
 In call cases, the files are in the /binaries/ directory
 
-## English - KryptoFranc: The crypto that gives and keeps on giving
+## English - Franc: The crypto that gives and keeps on giving
 
-from http://KryptoFranc.com/whitepapers.php
+from http://Franc.eu.com/whitepapers.php
 
-The KryptoFranc is a new altcoin, which purpose is to support organizations and individuals who defend human and citizen rights all over the world. Beyond this general mission, we consider that human rights now include the right to a clean and sustainable environment on a planet protected from the damages of wild carbon emissions.
-Today, the conditions in which charities raise funds seem less and less efficient, with ever increasing marketing costs for profits that, although they grow in absolute value, frequently deteriorate in terms of the relationship between collected and distributed funds.
-The ambition of the KryptoFranc is to bring new fundraising solutions for NGOs or individuals through the creation of a large community of voters who will select the cause(s) that will receive a significant part of our money supply every fortnight.
-The voting process will happen online via traditional web channels. Organizations and individuals who wish to apply for a donation will also have to do it online. Every fortnight, the KryptoFranc community will decide on a donation to a defender or a cause that support human rights, freedom and preservation of the Earth.
-The KryptoFranc already disposes of 3,2 billions premined KYF, among which 2 billions KYFwill be distributed in over a period of 10 years as free donations to causes we support.
-We believe that freedom in all its form has to be defended when and how the community decides it. In addition to voting, members of the community will be able to support causes that already received KryptoFrancs by buying the currency on the open market via the various exchange platforms on which it will be available.
-In that regard, we will create a dedicated exchange platform for charities to use and monetize their KryptoFrancs. This exchange platform will not be exclusive but will ensure the initial solvency of the currency.
-We count on this leverage tool to channel large financial flows in favor of freedom in the coming years.
-We believe that the KryptoFranc initiative can spark interest among a large audience for the following reasons: The very large audience of donors. In industrialized countries, nearly 60% of the adult population donates to charities every year.
-The growing number of organizations in need of funding. The United States alone is home to more than 1,2 millions charities. These organizations collect over 400 billion dollars every year. The phenomenon has now spread all over the world and Africa has become the continent with the fastest growth of charitable donations. In this environment, we believe that the KryptoFranc can become a reference altcoin for charities –several millions structures worldwideas well as donors –several hundreds millions of individuals. We are looking to initiate a virtuous circle in which donations will attract more donations and sustain the growth rate of the currency. This growth will attract investors and speculators who will replenish our initial donations. 
+₣ranc is designed to become both a good investment for the investors but also to become reserve currency for the ₣rance. 
+We think that French state and its central bank should adopt this currency as a reserve currency along with Euro and Gold. Cryptocurrencies should be part of any portfolio and specifically be kept as a collateral by every country, not only ₣rance. China, and Russia are going to do their own Nationnal Cryptocurrency, ₣ranc should be the one ₣rance choose. Once the ₣ranc will be accepted as a reserve currency by the French state, it will be natural to print banknotes and coins, to be used for cash purchase. We do not think that all the cash should be repleased by digital transaction, but we rather see the future with ₣ranc ATM transactions, and total anonymity when using the ₣ranc banknotes and physical coins rather than storing these micro transactions into the blockchain. Le cash (banknote and coins) should survive to the digital age to guarantee immediate and anonymous des micro-transactions like for example buying a coffee with a 2 ₣ranc coin.
 
-## French - KryptoFranc: La crypto qui donne et donne envie de donner
+Bitcoin is the leading cryptocurrency with about 60% of all the crypto capitalization, the second one is far behind with 15% only. ₣ranc is based on the latest Bitcoin version and will follow all the new releases of Bitcoin in the future, thanks to ou Moulinette that can patch Bitcoin to make the ₣ranc in a quasi-automatic way. However, Bitcoin is crippled by some design issues that we have fixed in ₣ranc. but that the Bitcoin team cannot fix by respect to the original Bitcoin design. First Bitcoin will mine 21 Millions and then stop rewarding the miners. Like most others blockchain, they have all an end of life and this is not far away, 80% of the cryptocurrency will reach this existantial thread in the next 10 years. ₣ranc does not have this problem, it is the first cryptocurrency that has been designed to reward the miners forever, even in 10,000 years! ₣ranc also mine faster (every 2.5 minutes, where Bitcoin is mining every 5 minutes). Also the difficulty of ₣ranc is re-adjusted ever 20 minutes, which avoid predatory mining when a powerfull miner comes and get all the rewards for himself. Bitcoin is adjusting every two weeks, which is we think too slow. ₣ranc has many other small technical fixes that makes it a superior blockchain than Bitcoin on the paper. ₣ranc is designed like a tank, to last, millenium years if possible. Not many cryptocurrencies can say the same.
 
-from http://KryptoFranc.com/whitepapers.php
+The ₣ranc is a true Blockchain, with its own certificates, own genesis, and started from scratch with its own parameters. It is designed to model the ₣ranc as it was when it was stopped. Our goal is to reach the following value: 0.15 Eur = 1 FRANC. We will issue 85 Billions of ₣rancs in the next 100 years which will match with the Gold reserve from the Bank of ₣rance. This way, the ₣ranc can become some sort of collateral reserve of wealth where the French people can save their money from the current finantial system and be sure that their money is protected by the inovative technology that is the blockchain trust system, that no one can change or modify. In one word, the ₣ranc is designed to be a financial Noah's Ark, that can resist to any financial storm, and that guarantee that the ₣rancs you own are saved, even in a total financial collapse event.
 
-Le KryptoFranc est un nouvel altcoin dont l’objet est de soutenir les organisations et les individus qui défendent les droits de l’homme et du citoyen à travers le monde. Au delà de ce thème principal, nous considérons que les droits de l’homme inclus désormais le droit à un environnement propre et durable sur planète protégée des dégâts d’un développement carboné non contrôlé. Aujourd’hui, les conditions dans lesquelles les organisations charitables lèvent des fonds semblent de moins en moins efficaces avec des coûts de marketing toujours plus importants pour des rendements qui, si ils progressent en valeur absolue, voient le rapport entre fonds collectés et fonds distribués se détériorer régulièrement. Le KryptoFranc entend rénover l’organisation de la collecte des dons à des ONG ou à des individus à travers la mise en place d’une large communauté de votants qui décident tous les quinze jours à quelle cause attribuer une allocation significative de notre masse monétaire. Le processus de vote se réalise en ligne par des moyens web traditionnels.Les organisations ou les individus qui souhaitent candidater à une donation peuvent le faire par le même moyen. Tous les quinze jours, la communauté du KryptoFranc vote pour attribuer une donation à un défenseur ou à une cause qui font progresser les droits de l’homme, l’égalité, la liberté et la protection de la planète. Dès son avènement, le KryptoFranc dispose d’une masse de 3,2 milliards de KYF dont 2 milliards seront distribués sous forme de dons gratuits aux causes soutenues au cours des années qui viennent. Nous pensons que toutes les formes de liberté doivent être défendues dès lors que les membres de notre communauté le décident. Les membres de la communauté qui le souhaitent pourront soutenir, au delà de leurs votes, les causes disposant de KryptoFranc en achetant la monnaie sur le marché ouvert avec travers les différents échanges sur lesquels elle sera présente.
-Dans ce cadre, nous mettrons à la disposition des organisations caritatives un échange dédié qu’elles pourront utiliser pour monétiser
-leurs Kryptofrancs. Cet échange ne sera pas exclusif mais permettra d’assurer une liquidité initiale à la monnaie. Nous comptons sur cet effet de levier pour organiser de larges flux financiers en faveur de la cause de la liberté au cours des années qui viennent.
-Nous pensons que l’initiative « KryptoFranc » est susceptible de susciter l’intérêt d’un large public. Le public des donateurs est très important : dans les pays industrialisés, près de 60% de la population adulte donne chaque année de l’argent à des organisations caritatives.
-Les organisations cherchant à recueillir des dons est en progression constante. Pour les seuls Etats-Unis, le nombre d’organisations caritatives est supérieur à 1,2 Million. Les fonds recueillis par ces organisations chaque année dépassent les 400 milliards de dollars. Le phénomène est désormais mondial et l’Afrique est devenue le continent sur lequel les donations caritatives se développent le plus rapidement. Dans cette configuration, nous pensons que le KryptoFranc peut devenir un altcoin de référence tant pour les organisations-plusieurs millions d’entités à travers le monde-que pour les donateurs-plusieurs centaines de millions d’individus concernés. Nous entendons ainsi créer un cercle vertueux dans lequel les dons appellent les dons qui assurent une croissance au cours de la monnaie,
-croissance qui attire investisseurs et spéculateurs qui abondent ainsi la valeur de nos dons initiaux.
+## French - Franc: La crypto qui donne et donne envie de donner
+
+from http://Franc.com/whitepapers.php
+
+₣ranc est conçu pour devenir à la fois un bon investissement pour les investisseurs mais également pour devenir une monnaie de réserve pour la ₣rance. 
+Nous pensons que l'Etat français et sa banque centrale devraient adopter cette monnaie comme monnaie de réserve avec l'Euro et l'or. Les crypto-monnaies doivent faire partie de tout portefeuille et être spécifiquement conservées en garantie par tous les pays, pas seulement par la ₣rance. La Chine et la Russie vont créer leur propre crypto-monnaie nationale. ₣ranc devrait être la solution que la ₣rance choisira. Une fois que le ₣ranc sera accepté comme monnaie de réserve par l’État français, il sera naturel d’imprimer des billets de banque et des pièces de monnaie à utiliser pour un achat au comptant. Nous ne pensons pas que toutes les espèces devraient être remplacées par des transaction numérique, mais nous envisageons l'avenir avec les transactions ₣ranc ATM et l'anonymat total lors de l'utilisation des billets de banque et des pièces physiques ₣ranc plutôt que de stocker ces micro-transactions dans la chaîne de blocs. Le cash (billets de banque et pièces) devrait survivre jusqu'à l'ère numérique pour garantir des micro-transactions immédiates et anonymes, comme par exemple l'achat d'un café avec une pièce de 2 ₣ranc.
+
+Bitcoin est la principale crypto-monnaie avec environ 60% de toute la capitalisation cryptographique, la seconde est loin derrière avec 15% seulement. Le ₣ranc est basé sur la dernière version de Bitcoin et suivra toutes les nouvelles versions de Bitcoin dans le futur, grâce à la Moulinette qui peut patcher Bitcoin pour fabriquer le ₣ranc de manière quasi automatique. Cependant, Bitcoin est paralysé par certains problèmes de conception que nous avons résolus dans le ₣ranc. mais que l'équipe Bitcoin ne peut pas résoudre par respect à la conception originale de Bitcoin. Tout d'abord, Bitcoin exploitera 21 millions de pieces, puis cessera de récompenser les mineurs. Comme la plupart des autres chaînes de blocs, elles ont toutes une fin de vie et, ce n'est pas loin dans le futur, 80% de la crypto-monnaie atteindra leur fin dans les 10 prochaines années. Le ₣ranc n'a pas ce problème, c'est la première crypto-monnaie conçue pour récompenser les mineurs pour toujours, même dans 10 000 ans! Le ₣ranc mine également plus rapidement (toutes les 2,5 minutes, où Bitcoin mine toutes les 5 minutes). De plus, la difficulté du ₣ranc est réajustée toutes les 20 minutes, ce qui évite les prédateurs lorsqu'un puissant mineur vient miner toute la récompense pour lui-même. Bitcoin s’adapte toutes les deux semaines, ce qui nous semble trop lent. ₣ranc a beaucoup d'autres petites corrections techniques qui en font une blockchain supérieure à Bitcoin sur le papier. ₣ranc est conçu comme un tank, pour durer, si possible des millénaires. Pas beaucoup de crypto-monnaies peuvent dire la même chose.
+
+Le ₣ranc est une vraie blockchain, avec ses propres certificats, sa propre genèse, et est parti de zéro avec ses propres paramètres. Il est conçu pour modéliser le ₣ranc tel qu'il était quand il a été arrêté. Notre objectif est d’atteindre la valeur suivante: 0,15 Eur = 1 FRANC. Nous allons émettre 85 milliards de ₣rancs au cours des 100 prochaines années, ce qui correspondra à la réserve d'or de la Banque de ₣rance. De cette façon, le ₣ranc peut devenir une sorte de réserve collatérale de richesse où les Français peuvent économiser leur argent hors du système financier actuel et être sûr que leur argent est protégé par l'inovation technologique qu'est la blockchain, que personne ne peut changer ou modifier. En un mot, le ₣ranc est conçu pour être une arche de Noé financière, capable de résister à toute les tempêtes du système financier et garantissant que les ₣rancs que vous possédez sont sauvés, même en cas de crise financière totale.
 
 ## License
-KryptoFranc Core is released under the terms of the MIT license. See COPYING for more information or see https://opensource.org/licenses/MIT.
+Franc Core is released under the terms of the MIT license. See COPYING for more information or see https://opensource.org/licenses/MIT.
