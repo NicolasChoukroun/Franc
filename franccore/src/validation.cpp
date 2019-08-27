@@ -1170,7 +1170,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     float year =(float) (nHeight / (float)consensusParams.nSubsidyHalvingInterval) + 1.0;
     float halfing = year / 0.1618033988750;
     nSubsidy = (nSubsidy / halfing) * COIN;
-    printf("GetBlockSubsidy - height=%i  halfing=%9.6f nSubsidy=%lu \n",nHeight,halfing,,nSubsidy);
+    printf("GetBlockSubsidy - height=%i  halfing=%9.6f nSubsidy=%lu \n",nHeight,halfing,nSubsidy);
 	return nSubsidy;
 
 	

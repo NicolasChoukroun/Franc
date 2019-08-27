@@ -1003,8 +1003,8 @@ void francGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerif
 
         progressBarLabel->setVisible(true);
         progressBar->setFormat(tr("%1 behind").arg(timeBehindText));
-        progressBar->setMaximum();
-        progressBar->setValue(nVerificationProgress * .0 + 0.5);
+        progressBar->setMaximum(10000);
+        progressBar->setValue(nVerificationProgress * 10000.0 + 0.5);
         progressBar->setVisible(true);
 
         tooltip = tr("Catching up...") + QString("<br>") + tooltip;

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-COINNAME="kyf"
-COINPATH="kryptofranccore"
+COINNAME="franc"
+COINPATH="franccore"
 
 #fix root issues
 sudo chown -R root:root $COINPATH
@@ -46,7 +46,7 @@ echo "--------------------------------------------------------------"
 echo -e $Color_Off
 
 # force recompile of the version
-rm kryptofranccore/src/libbitcoin_util_a-clientversion.o  
+rm franccore/src/libbitcoin_util_a-clientversion.o
 
 # initialize the internal variables
 OS="unix"
@@ -206,8 +206,8 @@ if [ $OS = "unix" ]; then
 	sudo cp -rf $COINPATH/src/qt/bitcoin-qt $COINPATH/src/qt/$COINNAME-qt
 
 	# this is for desktop icon, you have to make your own one.
-	sudo cp assets/android-icon-192x192.png binaries/unix/kryptofranc.png
-	sudo cp assets/android-icon-192x192.png /usr/share/app-install/icons/kryptofranc.png
+	sudo cp assets/android-icon-192x192.png binaries/unix/franc.png
+	sudo cp assets/android-icon-192x192.png /usr/share/app-install/icons/franc.png
 	sudo cp assets/$COINNAME-wallet.desktop binaries/unix/$COINNAME-wallet.desktop
 	# end of desktop icon 
 
@@ -286,7 +286,7 @@ if [ $OS = "win64" ]; then
 	sudo cp -rf $COINPATH/src/qt/$COINNAME-qt.exe binaries/win64/$COINNAME-qt.exe
 	sudo cp -rf $COINPATH/src/$COINNAME-wallet.exe binaries/win64/$COINNAME-wallet.exe
     if [ $DEPLOY = "yes" ]; then
-           sudo cp -rf $COINPATH/kryptofranc-0.18.0-win64-setup.exe binaries/win64/kyf-win64-setup.exe
+           sudo cp -rf $COINPATH/franc-0.18.0-win64-setup.exe binaries/win64/franc-win64-setup.exe
 	fi
 	
 	cd ..
