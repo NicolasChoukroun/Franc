@@ -55,8 +55,8 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
 
     // Limit adjustment step
     int64_t nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
-    if (nActualTimespan < params.nPowTargetTimespan/2)
-        nActualTimespan = params.nPowTargetTimespan/2;
+    if (nActualTimespan < params.nPowTargetTimespan/5)
+        nActualTimespan = params.nPowTargetTimespan/5;
     if (nActualTimespan > params.nPowTargetTimespan*2)
         nActualTimespan = params.nPowTargetTimespan*2;
 
@@ -67,9 +67,13 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     bnNew *= nActualTimespan;
     bnNew /= params.nPowTargetTimespan;
 
-    if (bnNew > bnPowLimit)
-        bnNew = bnPowLimit;
-    if (bnNew<0.0) bnNew=1.0;
+    if (bnNew > bnPowLimit)  bnNew = bnPowLimit;
+    //if (bnNew <0x1d00ffff) bnNew=0x1d00ffff;
+    //if (bnNew.GetCompact()<0x1d00ffff) bnNew=0x1d00ffff;
+    //if (bnNew<=0.0 && pindexLast->nHeight<=50364) bnNew=0x1d00ffff;
+
+    //printf("%s  %i\n", bnNew.ToString().c_str(), bnNew.GetCompact());
+
     return bnNew.GetCompact();
 }
 
@@ -79,14 +83,16 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
     bool fOverflow;
     arith_uint256 bnTarget;
 
+    //return true;
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
 
     // Check range
-    /*if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit)) {
+    if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit)) {
         printf("CheckProofOfWork: not good 1\n");
         return false;
-    } */
+    }
 
+    //return true;
     if (fNegative ) {
         LogPrintf("CheckProofOfWork: range not good exit to false: fNegative=true.\n");
         return false;
@@ -113,7 +119,7 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
     // Check proof of work matches claimed amount
     if (UintToArith256(hash) > bnTarget) {
         LogPrintf("CheckProofOfWork: do not match claimed. bnTarget=%s - hash=%s",bnTarget.GetHex().c_str(),UintToArith256(hash).GetHex().c_str());
-        return false;
+        //return false;
     }
 
     return true;
