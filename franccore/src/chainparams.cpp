@@ -118,7 +118,8 @@ public:
         consensus.BIP34Hash = uint256S("0x000407e630c17ccf96bc4cf12bc78153956f8715bbd5c955a67af23fd0a3c013");
         consensus.BIP65Height = 1; // optimization starting from 1; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP65Height = 1; // optimization starting from 1; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
-        //consensus.powLimit = uint256S("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+
+        //consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.powLimit=uint256S("0007ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         // for genesis only
         //consensus.powLimit=uint256S("000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -150,7 +151,7 @@ public:
         // The best chain should have at least this much work.
         //consensus.nMinimumChainWork = uint256S("0x0");
         //consensus.nMinimumChainWork = uint256S("0x1d00fff0");
-        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000001eb27580fe");
+        consensus.nMinimumChainWork = uint256S("00000000000000000000000000000000000000000000000000000844d3096fc6");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x0"); //563378
@@ -203,7 +204,19 @@ public:
 
         checkpointData = {
                 {
-                       // {0, uint256S("0x000010c380f17a4fb79ecbbeb23479ea4c9a2dc5e8b31049e8427dbab67d9665d")},
+                        {1, uint256S("00000000c41f5a07f0c54d85f9bc79ae00e94d8a20614566d5efd6aea4960010")},
+                        {1000, uint256S("000000005ea2dd2a7c11fda143b8516f78d3bfac2e29db11ef05cc3e9df48817")},
+                        {2000, uint256S("0000000006a84029be6839e298fccba128ce0065f6bbdaf5e0e9f60bae8af627")},
+                        {3000, uint256S("0000000036a7e0ad6f2d144ab560d5c8363bf1d29acccc65a8ad2a6babe9bf0d")},
+                        {4000, uint256S("000000003ef1988c266578223cb7d5258566d4e12715400a8f22f4977159a1a7")},
+                        {5000, uint256S("00000000e4ee741e3891741bf4b4d2eff69825fa763f62e4a3048540f4c79514")},
+                        {7000, uint256S("00000000e93509769adad800721d7ec879c58cfe116908e82ff8368ee8b74be7")},
+                        {9000, uint256S("00000000bf1a12a2724141dbacb4b647c60a0e8201ec0989712ca03e1e850b72")},
+                        {10000, uint256S("0000000035998a7b3f5a2f9359a33871ed841e7c9663970ee9c111979622b5e0")},
+                        {12000, uint256S("000000007c3c9b38f2e8db4b799b412732be669fab032ca30f658cfd100f2716")},
+                        {14000, uint256S("0000000042c7c678e6d357027b03a1b5d9a2ad105cde1ddd7d2135f0acf19cf2")},
+                        {16000, uint256S("00000000855044699edecd7f1a5e4ce517651aeb205b957472d1827ea558f52a")},
+
                 }
         };
 
