@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2019 The Bitcoin Core developers
+// Copyright (c) 2018-2019 The Franc Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NODE_PSBT_H
-#define BITCOIN_NODE_PSBT_H
+#ifndef FRANC_NODE_PSBT_H
+#define FRANC_NODE_PSBT_H
 
 #include <psbt.h>
 
@@ -40,4 +41,4 @@ struct PSBTAnalysis {
  */
 PSBTAnalysis AnalyzePSBT(PartiallySignedTransaction psbtx);
 
-#endif // BITCOIN_NODE_PSBT_H
+#endif // FRANC_NODE_PSBT_H

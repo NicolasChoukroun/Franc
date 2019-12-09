@@ -52,7 +52,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>francGUI</name>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -168,6 +168,6 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>franc-core</name>
     </context>
 </TS>

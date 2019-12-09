@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_UTIL_H
-#define BITCOIN_RPC_UTIL_H
+#ifndef FRANC_RPC_UTIL_H
+#define FRANC_RPC_UTIL_H
 
 #include <node/transaction.h>
 #include <outputtype.h>
@@ -265,4 +265,4 @@ private:
     const RPCExamples m_examples;
 };
 
-#endif // BITCOIN_RPC_UTIL_H
+#endif // FRANC_RPC_UTIL_H

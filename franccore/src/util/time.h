@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2019 The Bitcoin Core developers
+// Copyright (c) 2018-2019 The Franc Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UTIL_TIME_H
-#define BITCOIN_UTIL_TIME_H
+#ifndef FRANC_UTIL_TIME_H
+#define FRANC_UTIL_TIME_H
 
 #include <stdint.h>
 #include <string>
@@ -41,4 +42,4 @@ T GetTime();
 std::string FormatISO8601DateTime(int64_t nTime);
 std::string FormatISO8601Date(int64_t nTime);
 
-#endif // BITCOIN_UTIL_TIME_H
+#endif // FRANC_UTIL_TIME_H
