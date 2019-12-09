@@ -2,13 +2,9 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_WALLETINITINTERFACE_H
-#define FRANC_WALLETINITINTERFACE_H
+#ifndef BITCOIN_WALLETINITINTERFACE_H
+#define BITCOIN_WALLETINITINTERFACE_H
 
-#include <string>
-
-class CScheduler;
-class CRPCTable;
 struct InitInterfaces;
 
 class WalletInitInterface {
@@ -27,4 +23,4 @@ public:
 
 extern const WalletInitInterface& g_wallet_init_interface;
 
-#endif // FRANC_WALLETINITINTERFACE_H
+#endif // BITCOIN_WALLETINITINTERFACE_H

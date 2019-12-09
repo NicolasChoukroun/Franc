@@ -1,6 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The Kryptofranc Core developers
+// Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +9,6 @@
 #include <chain.h>
 #include <primitives/block.h>
 #include <uint256.h>
-#include <util/system.h>
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
 {
@@ -55,10 +53,10 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
 
     // Limit adjustment step
     int64_t nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
-    if (nActualTimespan < params.nPowTargetTimespan/5)
-        nActualTimespan = params.nPowTargetTimespan/5;
-    if (nActualTimespan > params.nPowTargetTimespan*2)
-        nActualTimespan = params.nPowTargetTimespan*2;
+    if (nActualTimespan < params.nPowTargetTimespan/4)
+        nActualTimespan = params.nPowTargetTimespan/4;
+    if (nActualTimespan > params.nPowTargetTimespan*4)
+        nActualTimespan = params.nPowTargetTimespan*4;
 
     // Retarget
     const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
@@ -67,12 +65,8 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     bnNew *= nActualTimespan;
     bnNew /= params.nPowTargetTimespan;
 
-    if (bnNew > bnPowLimit)  bnNew = bnPowLimit;
-    //if (bnNew <0x1d00ffff) bnNew=0x1d00ffff;
-    //if (bnNew.GetCompact()<0x1d00ffff) bnNew=0x1d00ffff;
-    //if (bnNew<=0.0 && pindexLast->nHeight<=50364) bnNew=0x1d00ffff;
-
-    //printf("%s  %i\n", bnNew.ToString().c_str(), bnNew.GetCompact());
+    if (bnNew > bnPowLimit)
+        bnNew = bnPowLimit;
 
     return bnNew.GetCompact();
 }
@@ -83,44 +77,15 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
     bool fOverflow;
     arith_uint256 bnTarget;
 
-    //return true;
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
 
     // Check range
-    if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit)) {
-        printf("CheckProofOfWork: not good 1\n");
+    if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit))
         return false;
-    }
-
-    //return true;
-    if (fNegative ) {
-        LogPrintf("CheckProofOfWork: range not good exit to false: fNegative=true.\n");
-        return false;
-        }
-
-     if (fOverflow ) {
-        LogPrintf("CheckProofOfWork: range not good exit to false: fOverflow=true.\n");
-        return false;
-    }
-    if (bnTarget > UintToArith256(params.powLimit)) {
-        LogPrintf("CheckProofOfWork: range not good exit to false. %s > %s \n",bnTarget.GetHex().c_str(),UintToArith256(params.powLimit).GetHex().c_str());
-        return false;
-    }
-	if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit)) {
-        LogPrintf("CheckProofOfWork: bnTarget=0");
-        return false;
-    }
-
-    if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit)) {
-        LogPrintf("CheckProofOfWork: range not good exit to false.");
-        return false;
-    }
 
     // Check proof of work matches claimed amount
-    if (UintToArith256(hash) > bnTarget) {
-        LogPrintf("CheckProofOfWork: do not match claimed. bnTarget=%s - hash=%s",bnTarget.GetHex().c_str(),UintToArith256(hash).GetHex().c_str());
-        //return false;
-    }
+    if (UintToArith256(hash) > bnTarget)
+        return false;
 
     return true;
 }

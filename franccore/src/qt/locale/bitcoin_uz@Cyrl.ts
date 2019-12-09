@@ -72,7 +72,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>francGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Хабар ёзиш...</translation>
@@ -138,8 +138,8 @@
         <translation>Дискдаги блоклар қайта индексланмоқда...</translation>
     </message>
     <message>
-        <source>Send coins to a franc address</source>
-        <translation>Тангаларни franc манзилига жўнатиш</translation>
+        <source>Send coins to a Bitcoin address</source>
+        <translation>Тангаларни Bitcoin манзилига жўнатиш</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -162,10 +162,6 @@
         <translation>Хабарни &amp;тасдиқлаш...</translation>
     </message>
     <message>
-        <source>franc</source>
-        <translation>franc</translation>
-    </message>
-    <message>
         <source>&amp;Send</source>
         <translation>&amp;Жўнатиш</translation>
     </message>
@@ -186,12 +182,12 @@
         <translation>Ҳамёнингизга тегишли махфий калитларни кодлаш</translation>
     </message>
     <message>
-        <source>Sign messages with your franc addresses to prove you own them</source>
-        <translation>franc манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
+        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <translation>Bitcoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified franc addresses</source>
-        <translation>Хабарларни махсус franc манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
+        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+        <translation>Хабарларни махсус Bitcoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -210,8 +206,8 @@
         <translation>Ички ойналар асбоблар панели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and franc: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва franc ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва bitcoin ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -222,16 +218,16 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a franc: URI or payment request</source>
-        <translation>franc’ни очиш: URI ёки тўлов сўрови</translation>
+        <source>Open a bitcoin: URI or payment request</source>
+        <translation>Bitcoin’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Буйруқлар сатри мосламалари</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to franc network</source>
-        <translation><numerusform>%n та franc тармоғига фаол уланиш мавжуд</numerusform></translation>
+        <source>%n active connection(s) to Bitcoin network</source>
+        <translation><numerusform>%n та Bitcoin тармоғига фаол уланиш мавжуд</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -350,6 +346,12 @@
     </message>
     </context>
 <context>
+    <name>CreateWalletActivity</name>
+    </context>
+<context>
+    <name>CreateWalletDialog</name>
+    </context>
+<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -425,8 +427,8 @@
         <translation>Бошқа маълумотлар директориясида фойдаланинг:</translation>
     </message>
     <message>
-        <source>franc</source>
-        <translation>franc</translation>
+        <source>Bitcoin</source>
+        <translation>Bitcoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -466,6 +468,9 @@
         <source>Select payment request file</source>
         <translation>Тўлов сўрови файлини танлаш</translation>
     </message>
+    </context>
+<context>
+    <name>OpenWalletActivity</name>
     </context>
 <context>
     <name>OptionsDialog</name>
@@ -581,8 +586,8 @@
         <translation>Шакл</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the franc network after a connection is established, but this process has not completed yet.</source>
-        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг franc тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг Bitcoin тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -662,8 +667,8 @@
         <translation>Миқдори</translation>
     </message>
     <message>
-        <source>Enter a franc address (e.g. %1)</source>
-        <translation>franc манзилини киритинг (масалан.  %1)</translation>
+        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <translation>Bitcoin манзилини киритинг (масалан.  %1)</translation>
     </message>
     <message>
         <source>%1 m</source>
@@ -711,10 +716,11 @@
     </message>
 </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
+    <message>
+        <source>&amp;Save Image...</source>
+        <translation>Расмни &amp;сақлаш</translation>
+    </message>
     </context>
 <context>
     <name>RPCConsole</name>
@@ -902,10 +908,6 @@
         <translation>Сўралган тўлов тарихи</translation>
     </message>
     <message>
-        <source>&amp;Request payment</source>
-        <translation>Тўловни &amp;сўраш</translation>
-    </message>
-    <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
         <translation>Танланган сўровни кўрсатиш (икки марта босилганда ҳам бир хил амал бажарилсин)</translation>
     </message>
@@ -937,12 +939,20 @@
         <translation>Расмни &amp;сақлаш</translation>
     </message>
     <message>
+        <source>Amount</source>
+        <translation>Миқдори</translation>
+    </message>
+    <message>
         <source>Wallet</source>
         <translation>Ҳамён</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
+    <message>
+        <source>Date</source>
+        <translation>Сана</translation>
+    </message>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -1088,7 +1098,11 @@
     </context>
 <context>
     <name>SendConfirmationDialog</name>
-    </context>
+    <message>
+        <source>Yes</source>
+        <translation>Ҳа</translation>
+    </message>
+</context>
 <context>
     <name>ShutdownWindow</name>
     </context>
@@ -1120,17 +1134,26 @@
     </message>
     </context>
 <context>
-    <name>SplashScreen</name>
-    <message>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
-    </message>
-</context>
-<context>
     <name>TrafficGraphWidget</name>
     </context>
 <context>
     <name>TransactionDesc</name>
+    <message>
+        <source>Date</source>
+        <translation>Сана</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>Номаълум</translation>
+    </message>
+    <message>
+        <source>Transaction fee</source>
+        <translation>Ўтказма тўлови</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Миқдори</translation>
+    </message>
     </context>
 <context>
     <name>TransactionDescDialog</name>
@@ -1141,9 +1164,21 @@
     </context>
 <context>
     <name>TransactionTableModel</name>
+    <message>
+        <source>Date</source>
+        <translation>Сана</translation>
+    </message>
     </context>
 <context>
     <name>TransactionView</name>
+    <message>
+        <source>Confirmed</source>
+        <translation>Тасдиқланди</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Сана</translation>
+    </message>
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
@@ -1156,24 +1191,24 @@
     </context>
 <context>
     <name>WalletModel</name>
+    <message>
+        <source>Send Coins</source>
+        <translation>Тангаларни жунат</translation>
+    </message>
     </context>
 <context>
     <name>WalletView</name>
+    <message>
+        <source>&amp;Export</source>
+        <translation>&amp;Экспорт</translation>
+    </message>
+    <message>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Жорий ички ойна ичидаги маълумотларни файлга экспорт қилиш</translation>
+    </message>
     </context>
 <context>
-    <name>franc-core</name>
-    <message>
-        <source>franc Core</source>
-        <translation>franc Core</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Маълумот</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Диққат</translation>
-    </message>
+    <name>bitcoin-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>Кам миқдор</translation>
@@ -1193,10 +1228,6 @@
     <message>
         <source>Done loading</source>
         <translation>Юклаш тайёр</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Хатолик</translation>
     </message>
 </context>
 </TS>

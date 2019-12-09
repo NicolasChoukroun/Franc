@@ -43,7 +43,7 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Dewis y cyfeiriad i yrru'r arian </translation>
+        <translation>Dewis y cyfeiriad i yrru'r arian</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
@@ -62,12 +62,8 @@
         <translation>Derbyn cyfeiriadau</translation>
     </message>
     <message>
-        <source>These are your franc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Rhain ydi eich cyfeiriadau franc ar gyfer gyrru taliadau. Gwnewch yn sicr o'r swm a'r cyfeiriad derbyn cyn gyrru arian.</translation>
-    </message>
-    <message>
-        <source>These are your franc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dyma eich cyfeiriadau franc ar gyfer derbyn taliadau. Argymhellwn ddefnyddio cyfeiriad derbyn newydd ar gyfer bob trafodyn.</translation>
+        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Rhain ydi eich cyfeiriadau Bitcoin ar gyfer gyrru taliadau. Gwnewch yn sicr o'r swm a'r cyfeiriad derbyn cyn gyrru arian.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -128,10 +124,6 @@
         <translation>Ailadroddwch gyfrinymadrodd newydd</translation>
     </message>
     <message>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation>Ysgrifennwch y cyfrinair newydd i'r waled. &lt;br/&gt; Os gwelwch yn dda, defnyddiwch gyfrinair &lt;b&gt; deg neu fwy o gymeriadau ar hap &lt;/b&gt; , neu &lt;b&gt; wyth neu fwy o eiriau &lt;/b&gt; .</translation>
-    </message>
-    <message>
         <source>Encrypt wallet</source>
         <translation>Amgryptio'r Waled</translation>
     </message>
@@ -156,16 +148,12 @@
         <translation>Newid cyfrinair</translation>
     </message>
     <message>
-        <source>Enter the old passphrase and new passphrase to the wallet.</source>
-        <translation>Ysgrifennwch yr hen gyfrinair a chyfrinair newydd y waled.</translation>
-    </message>
-    <message>
         <source>Confirm wallet encryption</source>
         <translation>Cadarnhau amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FRANCS&lt;/b&gt;!</source>
-        <translation>Rhybudd: Os ydych yn amgryptio'r waled ag yn colli'r cyfrinair, byddwch yn &lt;b&gt; COLLI EICH FRANCS I GYD &lt;b&gt; !</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <translation>Rhybudd: Os ydych yn amgryptio'r waled ag yn colli'r cyfrinair, byddwch yn &lt;b&gt; COLLI EICH BITCOINS I GYD &lt;b&gt; !</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -205,7 +193,7 @@
     </message>
     <message>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>Newid cyfrinair waled yn llwyddiannus. </translation>
+        <translation>Newid cyfrinair waled yn llwyddiannus.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -224,7 +212,7 @@
     </message>
 </context>
 <context>
-    <name>francGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Arwyddo &amp;neges...</translation>
@@ -298,6 +286,10 @@
         <translation>Agor &amp;URI...</translation>
     </message>
     <message>
+        <source>Wallet:</source>
+        <translation>Waled:</translation>
+    </message>
+    <message>
         <source>Click to disable network activity.</source>
         <translation>Cliciwch i anablu gweithgaredd y rhwydwaith.</translation>
     </message>
@@ -318,8 +310,8 @@
         <translation>Ailfynegi y blociau ar ddisg...</translation>
     </message>
     <message>
-        <source>Send coins to a franc address</source>
-        <translation>Anfon arian i gyfeiriad franc</translation>
+        <source>Send coins to a Bitcoin address</source>
+        <translation>Anfon arian i gyfeiriad Bitcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -336,10 +328,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Gwirio neges...</translation>
-    </message>
-    <message>
-        <source>franc</source>
-        <translation>franc</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -362,12 +350,12 @@
         <translation>Amgryptio'r allweddi preifat sy'n perthyn i'ch waled</translation>
     </message>
     <message>
-        <source>Sign messages with your franc addresses to prove you own them</source>
-        <translation>Arwyddo negeseuon gyda eich cyfeiriadau franc i brofi mae chi sy'n berchen arnynt</translation>
+        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <translation>Arwyddo negeseuon gyda eich cyfeiriadau Bitcoin i brofi mae chi sy'n berchen arnynt</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified franc addresses</source>
-        <translation>Gwirio negeseuon i sicrhau eu bod wedi eu harwyddo gyda cyfeiriadau franc penodol</translation>
+        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+        <translation>Gwirio negeseuon i sicrhau eu bod wedi eu harwyddo gyda cyfeiriadau Bitcoin penodol</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -386,8 +374,8 @@
         <translation>Bar offer tabiau</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and franc: URIs)</source>
-        <translation>Gofyn taliadau (creu côd QR a franc: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <translation>Gofyn taliadau (creu côd QR a bitcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -398,8 +386,8 @@
         <translation>Dangos rhestr o gyfeiriadau derbyn a labelau wedi eu defnyddio</translation>
     </message>
     <message>
-        <source>Open a franc: URI or payment request</source>
-        <translation>Agor franc: URI neu ofyn taliad</translation>
+        <source>Open a bitcoin: URI or payment request</source>
+        <translation>Agor Bitcoin: URI neu ofyn taliad</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -440,6 +428,22 @@
     <message>
         <source>Up to date</source>
         <translation>Cyfamserol</translation>
+    </message>
+    <message>
+        <source>Open Wallet</source>
+        <translation>Agor Waled</translation>
+    </message>
+    <message>
+        <source>Open a wallet</source>
+        <translation>Agor waled</translation>
+    </message>
+    <message>
+        <source>Close Wallet...</source>
+        <translation>Cau Waled...</translation>
+    </message>
+    <message>
+        <source>Close wallet</source>
+        <translation>Cau waled</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -508,8 +512,8 @@
         <translation>Mae'r waled &lt;b&gt;wedi'i amgryptio&lt;/b&gt; ac &lt;b&gt;ar glo&lt;/b&gt; ar hyn o bryd</translation>
     </message>
     <message>
-        <source>A fatal error occurred. franc can no longer continue safely and will quit.</source>
-        <translation>Mae gwall angheuol wedi digwydd. Ni all franc barhau'n ddiogel ac mae'n cau lawr.</translation>
+        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
+        <translation>Mae gwall angheuol wedi digwydd. Ni all Bitcoin barhau'n ddiogel ac mae'n cau lawr.</translation>
     </message>
 </context>
 <context>
@@ -521,6 +525,10 @@
     <message>
         <source>Quantity:</source>
         <translation>Maint:</translation>
+    </message>
+    <message>
+        <source>Bytes:</source>
+        <translation>Maint</translation>
     </message>
     <message>
         <source>Amount:</source>
@@ -584,6 +592,12 @@
     </message>
     </context>
 <context>
+    <name>CreateWalletActivity</name>
+    </context>
+<context>
+    <name>CreateWalletDialog</name>
+    </context>
+<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -615,8 +629,8 @@
         <translation>Croeso</translation>
     </message>
     <message>
-        <source>franc</source>
-        <translation>franc</translation>
+        <source>Bitcoin</source>
+        <translation>Bitcoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -640,6 +654,9 @@
         <source>URI:</source>
         <translation>URI:</translation>
     </message>
+    </context>
+<context>
+    <name>OpenWalletActivity</name>
     </context>
 <context>
     <name>OptionsDialog</name>
@@ -705,9 +722,6 @@
     </message>
     </context>
 <context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
     <name>QRImageWidget</name>
     </context>
 <context>
@@ -762,7 +776,7 @@
         <source>Wallet</source>
         <translation>Waled</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -882,13 +896,6 @@
     </message>
     </context>
 <context>
-    <name>SplashScreen</name>
-    <message>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
-    </message>
-</context>
-<context>
     <name>TrafficGraphWidget</name>
     </context>
 <context>
@@ -992,12 +999,20 @@
     </context>
 <context>
     <name>WalletController</name>
+    <message>
+        <source>Close wallet</source>
+        <translation>Cau waled</translation>
+    </message>
     </context>
 <context>
     <name>WalletFrame</name>
     </context>
 <context>
     <name>WalletModel</name>
+    <message>
+        <source>Send Coins</source>
+        <translation>Anfon arian</translation>
+    </message>
     <message>
         <source>Current fee:</source>
         <translation>Ffi gyfredol</translation>
@@ -1023,22 +1038,6 @@
     </message>
     </context>
 <context>
-    <name>franc-core</name>
-    <message>
-        <source>franc Core</source>
-        <translation>Craidd franc</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Gwybodaeth</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Rhybudd</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Gwall</translation>
-    </message>
-</context>
+    <name>bitcoin-core</name>
+    </context>
 </TS>

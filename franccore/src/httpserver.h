@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_HTTPSERVER_H
-#define FRANC_HTTPSERVER_H
+#ifndef BITCOIN_HTTPSERVER_H
+#define BITCOIN_HTTPSERVER_H
 
 #include <string>
 #include <stdint.h>
@@ -148,6 +148,4 @@ private:
     struct event* ev;
 };
 
-std::string urlDecode(const std::string &urlEncoded);
-
-#endif // FRANC_HTTPSERVER_H
+#endif // BITCOIN_HTTPSERVER_H

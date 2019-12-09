@@ -4,8 +4,6 @@
 
 #include <qt/platformstyle.h>
 
-#include <qt/guiconstants.h>
-
 #include <QApplication>
 #include <QColor>
 #include <QImage>
@@ -49,7 +47,7 @@ QIcon ColorizeIcon(const QIcon& ico, const QColor& colorbase)
     for (const QSize& sz : ico.availableSizes())
     {
         QImage img(ico.pixmap(sz).toImage());
-        // MakeSingleColorImage(img, colorbase);
+        MakeSingleColorImage(img, colorbase);
         new_ico.addPixmap(QPixmap::fromImage(img));
     }
     return new_ico;
@@ -58,7 +56,7 @@ QIcon ColorizeIcon(const QIcon& ico, const QColor& colorbase)
 QImage ColorizeImage(const QString& filename, const QColor& colorbase)
 {
     QImage img(filename);
-    // MakeSingleColorImage(img, colorbase);
+    MakeSingleColorImage(img, colorbase);
     return img;
 }
 
@@ -114,11 +112,6 @@ QIcon PlatformStyle::SingleColorIcon(const QIcon& icon) const
     if (!colorizeIcons)
         return icon;
     return ColorizeIcon(icon, SingleColor());
-}
-
-QIcon PlatformStyle::TextColorIcon(const QString& filename) const
-{
-    return ColorizeIcon(filename, TextColor());
 }
 
 QIcon PlatformStyle::TextColorIcon(const QIcon& icon) const

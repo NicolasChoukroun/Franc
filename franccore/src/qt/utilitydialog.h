@@ -2,13 +2,13 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_QT_UTILITYDIALOG_H
-#define FRANC_QT_UTILITYDIALOG_H
+#ifndef BITCOIN_QT_UTILITYDIALOG_H
+#define BITCOIN_QT_UTILITYDIALOG_H
 
 #include <QDialog>
 #include <QObject>
 
-class francGUI;
+class BitcoinGUI;
 
 namespace interfaces {
     class Node;
@@ -46,10 +46,10 @@ class ShutdownWindow : public QWidget
 
 public:
     explicit ShutdownWindow(QWidget *parent=nullptr, Qt::WindowFlags f=Qt::Widget);
-    static QWidget *showShutdownWindow(francGUI *window);
+    static QWidget *showShutdownWindow(BitcoinGUI *window);
 
 protected:
     void closeEvent(QCloseEvent *event);
 };
 
-#endif // FRANC_QT_UTILITYDIALOG_H
+#endif // BITCOIN_QT_UTILITYDIALOG_H

@@ -1,16 +1,18 @@
 // Copyright (c) 2009-2019 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The Franc Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_PSBT_H
-#define FRANC_PSBT_H
+#ifndef BITCOIN_PSBT_H
+#define BITCOIN_PSBT_H
 
 #include <attributes.h>
 #include <node/transaction.h>
+#include <optional.h>
+#include <policy/feerate.h>
 #include <primitives/transaction.h>
 #include <pubkey.h>
 #include <script/sign.h>
+#include <script/signingprovider.h>
 
 // Magic bytes
 static constexpr uint8_t PSBT_MAGIC_BYTES[5] = {'p', 's', 'b', 't', 0xff};
@@ -387,7 +389,7 @@ struct PartiallySignedTransaction
     bool IsNull() const;
 
     /** Merge psbt into this. The two psbts must have the same underlying CTransaction (i.e. the
-      * same actual franc transaction.) Returns true if the merge succeeded, false otherwise. */
+      * same actual Bitcoin transaction.) Returns true if the merge succeeded, false otherwise. */
     NODISCARD bool Merge(const PartiallySignedTransaction& psbt);
     bool IsSane() const;
     bool AddInput(const CTxIn& txin, PSBTInput& psbtin);
@@ -549,11 +551,26 @@ struct PartiallySignedTransaction
     }
 };
 
+enum class PSBTRole {
+    UPDATER,
+    SIGNER,
+    FINALIZER,
+    EXTRACTOR
+};
+
+std::string PSBTRoleName(PSBTRole role);
+
 /** Checks whether a PSBTInput is already signed. */
-bool PSBTInputSigned(PSBTInput& input);
+bool PSBTInputSigned(const PSBTInput& input);
 
 /** Signs a PSBTInput, verifying that all provided data matches what is being signed. */
 bool SignPSBTInput(const SigningProvider& provider, PartiallySignedTransaction& psbt, int index, int sighash = SIGHASH_ALL, SignatureData* out_sigdata = nullptr, bool use_dummy = false);
+
+/** Updates a PSBTOutput with information from provider.
+ *
+ * This fills in the redeem_script, witness_script, and hd_keypaths where possible.
+ */
+void UpdatePSBTOutput(const SigningProvider& provider, PartiallySignedTransaction& psbt, int index);
 
 /**
  * Finalizes a PSBT if possible, combining partial signatures.
@@ -581,4 +598,9 @@ bool FinalizeAndExtractPSBT(PartiallySignedTransaction& psbtx, CMutableTransacti
  */
 NODISCARD TransactionError CombinePSBTs(PartiallySignedTransaction& out, const std::vector<PartiallySignedTransaction>& psbtxs);
 
-#endif // FRANC_PSBT_H
+//! Decode a base64ed PSBT into a PartiallySignedTransaction
+NODISCARD bool DecodeBase64PSBT(PartiallySignedTransaction& decoded_psbt, const std::string& base64_psbt, std::string& error);
+//! Decode a raw (binary blob) PSBT into a PartiallySignedTransaction
+NODISCARD bool DecodeRawPSBT(PartiallySignedTransaction& decoded_psbt, const std::string& raw_psbt, std::string& error);
+
+#endif // BITCOIN_PSBT_H

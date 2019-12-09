@@ -64,7 +64,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>francGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>I-sign ing &amp;mensayi</translation>
@@ -122,8 +122,8 @@
         <translation>&amp;Alilan ing Passphrase...</translation>
     </message>
     <message>
-        <source>Send coins to a franc address</source>
-        <translation>Magpadalang barya king franc address</translation>
+        <source>Send coins to a Bitcoin address</source>
+        <translation>Magpadalang barya king Bitcoin address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -144,10 +144,6 @@
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Beripikan ing message...</translation>
-    </message>
-    <message>
-        <source>franc</source>
-        <translation>franc</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -175,7 +171,7 @@
     </message>
     <message>
         <source>&amp;Command-line options</source>
-        <translation>Pipamilian command-line</translation>
+        <translation>Pipamilian &amp;command-line</translation>
     </message>
     <message>
         <source>Last received block was generated %1 ago.</source>
@@ -246,6 +242,12 @@
     </message>
     </context>
 <context>
+    <name>CreateWalletActivity</name>
+    </context>
+<context>
+    <name>CreateWalletDialog</name>
+    </context>
+<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -281,8 +283,8 @@
         <translation>Malaus ka</translation>
     </message>
     <message>
-        <source>franc</source>
-        <translation>franc</translation>
+        <source>Bitcoin</source>
+        <translation>Bitcoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -304,6 +306,9 @@
     <name>OpenURIDialog</name>
     </context>
 <context>
+    <name>OpenWalletActivity</name>
+    </context>
+<context>
     <name>OptionsDialog</name>
     <message>
         <source>Options</source>
@@ -318,8 +323,8 @@
         <translation>&amp;Network</translation>
     </message>
     <message>
-        <source>Automatically open the franc client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ibuklat yang antimanu ing franc client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
+        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ibuklat yang antimanu ing Bitcoin client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -397,8 +402,8 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the franc network after a connection is established, but this process has not completed yet.</source>
-        <translation>Ing makaltong impormasion mapalyaring luma ne. Ing kekang wallet otomatiku yang mag-synchronize keng franc network istung mekakonekta ne king network, oneng ing prosesung ini ali ya pa kumpletu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Ing makaltong impormasion mapalyaring luma ne. Ing kekang wallet otomatiku yang mag-synchronize keng Bitcoin network istung mekakonekta ne king network, oneng ing prosesung ini ali ya pa kumpletu.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -446,9 +451,6 @@
         <translation>e miya balu</translation>
     </message>
 </context>
-<context>
-    <name>QObject::QObject</name>
-    </context>
 <context>
     <name>QRImageWidget</name>
     </context>
@@ -529,12 +531,20 @@
         <translation>&amp;Kopyan ing address</translation>
     </message>
     <message>
+        <source>Amount</source>
+        <translation>Alaga</translation>
+    </message>
+    <message>
         <source>Wallet</source>
         <translation>Wallet</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
+    <message>
+        <source>Date</source>
+        <translation>Kaaldauan</translation>
+    </message>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -576,7 +586,7 @@
     </message>
     <message>
         <source>S&amp;end</source>
-        <translation>Ipadala</translation>
+        <translation>&amp;Ipadala</translation>
     </message>
     <message>
         <source>Transaction fee</source>
@@ -659,8 +669,8 @@
         <translation>Kopyan ing kasalungsungan pirma king system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this franc address</source>
-        <translation>Pirman ing mensayi ban patune na keka ya ining franc address</translation>
+        <source>Sign the message to prove you own this Bitcoin address</source>
+        <translation>Pirman ing mensayi ban patune na keka ya ining Bitcoin address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -679,8 +689,8 @@
         <translation>&amp;Beripikan ing Mensayi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified franc address</source>
-        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling franc address</translation>
+        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
+        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Bitcoin address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -692,17 +702,26 @@
     </message>
     </context>
 <context>
-    <name>SplashScreen</name>
-    <message>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
-    </message>
-</context>
-<context>
     <name>TrafficGraphWidget</name>
     </context>
 <context>
     <name>TransactionDesc</name>
+    <message>
+        <source>Date</source>
+        <translation>Kaaldauan</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>e miya balu</translation>
+    </message>
+    <message>
+        <source>Transaction fee</source>
+        <translation>Bayad king Transaksion</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Alaga</translation>
+    </message>
     </context>
 <context>
     <name>TransactionDescDialog</name>
@@ -713,9 +732,21 @@
     </context>
 <context>
     <name>TransactionTableModel</name>
+    <message>
+        <source>Date</source>
+        <translation>Kaaldauan</translation>
+    </message>
     </context>
 <context>
     <name>TransactionView</name>
+    <message>
+        <source>Confirmed</source>
+        <translation>Me-kumpirma</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Kaaldauan</translation>
+    </message>
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
@@ -728,16 +759,16 @@
     </context>
 <context>
     <name>WalletModel</name>
+    <message>
+        <source>Send Coins</source>
+        <translation>Magpadalang Barya</translation>
+    </message>
     </context>
 <context>
     <name>WalletView</name>
     </context>
 <context>
-    <name>franc-core</name>
-    <message>
-        <source>franc Core</source>
-        <translation>Kapilubluban ning franc</translation>
-    </message>
+    <name>bitcoin-core</name>
     <message>
         <source>Corrupted block database detected</source>
         <translation>Mekapansin lang me-corrupt a block database</translation>
@@ -755,24 +786,12 @@
         <translation>Kamalian king pamag buklat king block database</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>Kamalian: Mababa ne ing espasyu king disk!</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Memali ya ing pamakiramdam kareng gang nanung port. Gamita me ini -listen=0 nung buri me ini.</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>&amp;Impormasion</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>Maragul yang masiadu ing transaksion</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Kapabaluan</translation>
     </message>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
@@ -801,10 +820,6 @@
     <message>
         <source>Done loading</source>
         <translation>Yari ne ing pamag-load</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Mali</translation>
     </message>
 </context>
 </TS>

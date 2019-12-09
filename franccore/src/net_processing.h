@@ -1,12 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The Franc Core developers
-
+// Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_NET_PROCESSING_H
-#define FRANC_NET_PROCESSING_H
+#ifndef BITCOIN_NET_PROCESSING_H
+#define BITCOIN_NET_PROCESSING_H
 
 #include <net.h>
 #include <validationinterface.h>
@@ -20,7 +18,8 @@ static const unsigned int DEFAULT_MAX_ORPHAN_TRANSACTIONS = 100;
 /** Default number of orphan+recently-replaced txn to keep around for block reconstruction */
 static const unsigned int DEFAULT_BLOCK_RECONSTRUCTION_EXTRA_TXN = 100;
 /** Default for BIP61 (sending reject messages) */
-static constexpr bool DEFAULT_ENABLE_BIP61{true};
+static constexpr bool DEFAULT_ENABLE_BIP61{false};
+static const bool DEFAULT_PEERBLOOMFILTERS = false;
 
 class PeerLogicValidation final : public CValidationInterface, public NetEventsInterface {
 private:
@@ -91,4 +90,7 @@ struct CNodeStateStats {
 /** Get statistics from node state */
 bool GetNodeStateStats(NodeId nodeid, CNodeStateStats &stats);
 
-#endif // FRANC_NET_PROCESSING_H
+/** Relay transaction to every node */
+void RelayTransaction(const uint256&, const CConnman& connman);
+
+#endif // BITCOIN_NET_PROCESSING_H

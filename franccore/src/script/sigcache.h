@@ -1,12 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The Franc Core developers
-
+// Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_SCRIPT_SIGCACHE_H
-#define FRANC_SCRIPT_SIGCACHE_H
+#ifndef BITCOIN_SCRIPT_SIGCACHE_H
+#define BITCOIN_SCRIPT_SIGCACHE_H
 
 #include <script/interpreter.h>
 
@@ -55,4 +53,4 @@ public:
 
 void InitSignatureCache();
 
-#endif // FRANC_SCRIPT_SIGCACHE_H
+#endif // BITCOIN_SCRIPT_SIGCACHE_H

@@ -40,7 +40,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>francGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>&amp;Send</source>
         <translation>&amp;ناردن</translation>
@@ -98,6 +98,12 @@
     </message>
     </context>
 <context>
+    <name>CreateWalletActivity</name>
+    </context>
+<context>
+    <name>CreateWalletDialog</name>
+    </context>
+<context>
     <name>EditAddressDialog</name>
     </context>
 <context>
@@ -130,6 +136,9 @@
     </context>
 <context>
     <name>OpenURIDialog</name>
+    </context>
+<context>
+    <name>OpenWalletActivity</name>
     </context>
 <context>
     <name>OptionsDialog</name>
@@ -165,9 +174,6 @@
         <source>Amount</source>
         <translation>سەرجەم</translation>
     </message>
-    </context>
-<context>
-    <name>QObject::QObject</name>
     </context>
 <context>
     <name>QRImageWidget</name>
@@ -320,9 +326,6 @@
     <name>SignVerifyMessageDialog</name>
     </context>
 <context>
-    <name>SplashScreen</name>
-    </context>
-<context>
     <name>TrafficGraphWidget</name>
     </context>
 <context>
@@ -377,18 +380,6 @@
     </message>
     </context>
 <context>
-    <name>franc-core</name>
-    <message>
-        <source>Information</source>
-        <translation>زانیاری</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>ئاگاداری</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>هەڵە</translation>
-    </message>
-</context>
+    <name>bitcoin-core</name>
+    </context>
 </TS>

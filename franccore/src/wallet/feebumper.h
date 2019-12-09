@@ -1,9 +1,9 @@
-// Copyright (c) 2017-2018 The Bitcoin Core developers
+// Copyright (c) 2017-2019 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_WALLET_FEEBUMPER_H
-#define FRANC_WALLET_FEEBUMPER_H
+#ifndef BITCOIN_WALLET_FEEBUMPER_H
+#define BITCOIN_WALLET_FEEBUMPER_H
 
 #include <primitives/transaction.h>
 
@@ -28,11 +28,20 @@ enum class Result
 //! Return whether transaction can be bumped.
 bool TransactionCanBeBumped(const CWallet* wallet, const uint256& txid);
 
-//! Create bumpfee transaction.
-Result CreateTransaction(const CWallet* wallet,
+//! Create bumpfee transaction based on total amount.
+Result CreateTotalBumpTransaction(const CWallet* wallet,
                          const uint256& txid,
                          const CCoinControl& coin_control,
                          CAmount total_fee,
+                         std::vector<std::string>& errors,
+                         CAmount& old_fee,
+                         CAmount& new_fee,
+                         CMutableTransaction& mtx);
+
+//! Create bumpfee transaction based on feerate estimates.
+Result CreateRateBumpTransaction(CWallet* wallet,
+                         const uint256& txid,
+                         const CCoinControl& coin_control,
                          std::vector<std::string>& errors,
                          CAmount& old_fee,
                          CAmount& new_fee,
@@ -55,4 +64,4 @@ Result CommitTransaction(CWallet* wallet,
 
 } // namespace feebumper
 
-#endif // FRANC_WALLET_FEEBUMPER_H
+#endif // BITCOIN_WALLET_FEEBUMPER_H

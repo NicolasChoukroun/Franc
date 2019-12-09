@@ -44,7 +44,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>francGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Warning</source>
         <translation>අවවාදය</translation>
@@ -98,6 +98,12 @@
     </message>
 </context>
 <context>
+    <name>CreateWalletActivity</name>
+    </context>
+<context>
+    <name>CreateWalletDialog</name>
+    </context>
+<context>
     <name>EditAddressDialog</name>
     </context>
 <context>
@@ -132,6 +138,9 @@
     </message>
     </context>
 <context>
+    <name>OpenWalletActivity</name>
+    </context>
+<context>
     <name>OptionsDialog</name>
     <message>
         <source>IPv4</source>
@@ -161,9 +170,6 @@
         <source>Amount</source>
         <translation>අගය</translation>
     </message>
-    </context>
-<context>
-    <name>QObject::QObject</name>
     </context>
 <context>
     <name>QRImageWidget</name>
@@ -240,9 +246,6 @@
     <name>SignVerifyMessageDialog</name>
     </context>
 <context>
-    <name>SplashScreen</name>
-    </context>
-<context>
     <name>TrafficGraphWidget</name>
     </context>
 <context>
@@ -305,14 +308,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>franc-core</name>
-    <message>
-        <source>Information</source>
-        <translation>තොරතුර</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>අවවාදය</translation>
-    </message>
+    <name>bitcoin-core</name>
     </context>
 </TS>

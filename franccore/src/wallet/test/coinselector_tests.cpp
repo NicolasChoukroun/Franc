@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2018 The Bitcoin Core developers
+// Copyright (c) 2017-2019 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +8,7 @@
 #include <amount.h>
 #include <primitives/transaction.h>
 #include <random.h>
-#include <test/test_bitcoin.h>
+#include <test/setup_common.h>
 #include <wallet/test/wallet_test_fixture.h>
 
 #include <boost/test/unit_test.hpp>
@@ -29,7 +29,7 @@ typedef std::set<CInputCoin> CoinSet;
 
 static std::vector<COutput> vCoins;
 static auto testChain = interfaces::MakeChain();
-static CWallet testWallet(*testChain, WalletLocation(), WalletDatabase::CreateDummy());
+static CWallet testWallet(testChain.get(), WalletLocation(), WalletDatabase::CreateDummy());
 static CAmount balance = 0;
 
 CoinEligibilityFilter filter_standard(1, 6, 0);
@@ -69,8 +69,7 @@ static void add_coin(const CAmount& nValue, int nAge = 6*24, bool fIsFromMe = fa
     std::unique_ptr<CWalletTx> wtx = MakeUnique<CWalletTx>(&testWallet, MakeTransactionRef(std::move(tx)));
     if (fIsFromMe)
     {
-        wtx->fDebitCached = true;
-        wtx->nDebitCached = 1;
+        wtx->m_amounts[CWalletTx::DEBIT].Set(ISMINE_SPENDABLE, 1);
     }
     COutput output(wtx.get(), nInput, nAge, true /* spendable */, true /* solvable */, true /* safe */);
     vCoins.push_back(output);
@@ -115,7 +114,7 @@ inline std::vector<OutputGroup>& GroupCoins(const std::vector<COutput>& coins)
 {
     static std::vector<OutputGroup> static_groups;
     static_groups.clear();
-    for (auto& coin : coins) static_groups.emplace_back(coin.GetInputCoin(), coin.nDepth, coin.tx->fDebitCached && coin.tx->nDebitCached == 1 /* HACK: we can't figure out the is_me flag so we use the conditions defined above; perhaps set safe to false for !fIsFromMe in add_coin() */, 0, 0);
+    for (auto& coin : coins) static_groups.emplace_back(coin.GetInputCoin(), coin.nDepth, coin.tx->m_amounts[CWalletTx::DEBIT].m_cached[ISMINE_SPENDABLE] && coin.tx->m_amounts[CWalletTx::DEBIT].m_value[ISMINE_SPENDABLE] == 1 /* HACK: we can't figure out the is_me flag so we use the conditions defined above; perhaps set safe to false for !fIsFromMe in add_coin() */, 0, 0);
     return static_groups;
 }
 
@@ -135,7 +134,6 @@ BOOST_AUTO_TEST_CASE(bnb_search_test)
     /////////////////////////
     // Known Outcome tests //
     /////////////////////////
-    BOOST_TEST_MESSAGE("Testing known outcomes");
 
     // Empty utxo pool
     BOOST_CHECK(!SelectCoinsBnB(GroupCoins(utxo_pool), 1 * CENT, 0.5 * CENT, selection, value_ret, not_input_fees));
@@ -379,11 +377,11 @@ BOOST_AUTO_TEST_CASE(knapsack_solver_test)
         add_coin( 3*COIN);
         add_coin( 4*COIN); // now we have 5+6+7+8+18+20+30+100+200+300+400 = 1094 cents
         BOOST_CHECK( testWallet.SelectCoinsMinConf(95 * CENT, filter_confirmed, GroupCoins(vCoins), setCoinsRet, nValueRet, coin_selection_params, bnb_used));
-        BOOST_CHECK_EQUAL(nValueRet, 1 * COIN);  // we should get 1 franc in 1 coin
+        BOOST_CHECK_EQUAL(nValueRet, 1 * COIN);  // we should get 1 BTC in 1 coin
         BOOST_CHECK_EQUAL(setCoinsRet.size(), 1U);
 
         BOOST_CHECK( testWallet.SelectCoinsMinConf(195 * CENT, filter_confirmed, GroupCoins(vCoins), setCoinsRet, nValueRet, coin_selection_params, bnb_used));
-        BOOST_CHECK_EQUAL(nValueRet, 2 * COIN);  // we should get 2 franc in 1 coin
+        BOOST_CHECK_EQUAL(nValueRet, 2 * COIN);  // we should get 2 BTC in 1 coin
         BOOST_CHECK_EQUAL(setCoinsRet.size(), 1U);
 
         // empty the wallet and start again, now with fractions of a cent, to test small change avoidance

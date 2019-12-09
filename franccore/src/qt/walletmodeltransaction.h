@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_QT_WALLETMODELTRANSACTION_H
-#define FRANC_QT_WALLETMODELTRANSACTION_H
+#ifndef BITCOIN_QT_WALLETMODELTRANSACTION_H
+#define BITCOIN_QT_WALLETMODELTRANSACTION_H
 
 #include <qt/walletmodel.h>
 
@@ -16,7 +16,6 @@ class SendCoinsRecipient;
 
 namespace interfaces {
 class Node;
-class PendingWalletTx;
 }
 
 /** Data model for a walletmodel transaction. */
@@ -27,7 +26,7 @@ public:
 
     QList<SendCoinsRecipient> getRecipients() const;
 
-    std::unique_ptr<interfaces::PendingWalletTx>& getWtx();
+    CTransactionRef& getWtx();
     unsigned int getTransactionSize();
 
     void setTransactionFee(const CAmount& newFee);
@@ -39,8 +38,8 @@ public:
 
 private:
     QList<SendCoinsRecipient> recipients;
-    std::unique_ptr<interfaces::PendingWalletTx> wtx;
+    CTransactionRef wtx;
     CAmount fee;
 };
 
-#endif // FRANC_QT_WALLETMODELTRANSACTION_H
+#endif // BITCOIN_QT_WALLETMODELTRANSACTION_H

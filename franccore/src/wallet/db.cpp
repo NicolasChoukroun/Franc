@@ -1,17 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2019 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The Franc Core developers
-
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <wallet/db.h>
 
-#include <addrman.h>
-#include <hash.h>
-#include <protocol.h>
 #include <util/strencodings.h>
-#include <wallet/walletutil.h>
+#include <util/translation.h>
 
 #include <stdint.h>
 
@@ -30,7 +25,7 @@ namespace {
 //!
 //! BerkeleyDB generates unique fileids by default
 //! (https://docs.oracle.com/cd/E17275_01/html/programmer_reference/program_copy.html),
-//! so franc should never create different databases with the same fileid, but
+//! so bitcoin should never create different databases with the same fileid, but
 //! this error can be triggered if users manually copy database files.
 void CheckUniqueFileid(const BerkeleyEnvironment& env, const std::string& filename, Db& db, WalletDatabaseFileId& fileid)
 {
@@ -84,6 +79,14 @@ bool IsWalletLoaded(const fs::path& wallet_path)
     if (env == g_dbenvs.end()) return false;
     auto database = env->second.lock();
     return database && database->IsDatabaseLoaded(database_filename);
+}
+
+fs::path WalletDataFilePath(const fs::path& wallet_path)
+{
+    fs::path env_directory;
+    std::string database_filename;
+    SplitWalletPath(wallet_path, env_directory, database_filename);
+    return env_directory / database_filename;
 }
 
 /**
@@ -171,7 +174,7 @@ bool BerkeleyEnvironment::Open(bool retry)
     fs::path pathIn = strPath;
     TryCreateDirectories(pathIn);
     if (!LockDirectory(pathIn, ".walletlock")) {
-        LogPrintf("Cannot obtain a lock on wallet directory %s. Another instance of franc may be using it.\n", strPath);
+        LogPrintf("Cannot obtain a lock on wallet directory %s. Another instance of bitcoin may be using it.\n", strPath);
         return false;
     }
 
@@ -401,15 +404,8 @@ bool BerkeleyBatch::VerifyEnvironment(const fs::path& file_path, std::string& er
     LogPrintf("Using BerkeleyDB version %s\n", DbEnv::version(nullptr, nullptr, nullptr));
     LogPrintf("Using wallet %s\n", file_path.string());
 
-    // Wallet file must be a plain filename without a directory
-    if (walletFile != fs::basename(walletFile) + fs::extension(walletFile))
-    {
-        errorStr = strprintf(_("Wallet %s resides outside wallet directory %s"), walletFile, walletDir.string());
-        return false;
-    }
-
     if (!env->Open(true /* retry */)) {
-        errorStr = strprintf(_("Error initializing wallet database environment %s!"), walletDir);
+        errorStr = strprintf(_("Error initializing wallet database environment %s!").translated, walletDir);
         return false;
     }
 
@@ -431,12 +427,12 @@ bool BerkeleyBatch::VerifyDatabaseFile(const fs::path& file_path, std::string& w
             warningStr = strprintf(_("Warning: Wallet file corrupt, data salvaged!"
                                      " Original %s saved as %s in %s; if"
                                      " your balance or transactions are incorrect you should"
-                                     " restore from a backup."),
+                                     " restore from a backup.").translated,
                                    walletFile, backup_filename, walletDir);
         }
         if (r == BerkeleyEnvironment::VerifyResult::RECOVER_FAIL)
         {
-            errorStr = strprintf(_("%s corrupt, salvage failed"), walletFile);
+            errorStr = strprintf(_("%s corrupt, salvage failed").translated, walletFile);
             return false;
         }
     }
@@ -569,7 +565,7 @@ BerkeleyBatch::BerkeleyBatch(BerkeleyDatabase& database, const char* pszMode, bo
             // files in the same environment have the same fileid.
             //
             // Also call CheckUniqueFileid on all the other g_dbenvs to prevent
-            // franc from opening the same data file through another
+            // bitcoin from opening the same data file through another
             // environment when the file is referenced through equivalent but
             // not obviously identical symlinked or hard linked or bind mounted
             // paths. In the future a more relaxed check for equal inode and
@@ -589,7 +585,7 @@ BerkeleyBatch::BerkeleyBatch(BerkeleyDatabase& database, const char* pszMode, bo
             if (fCreate && !Exists(std::string("version"))) {
                 bool fTmp = fReadOnly;
                 fReadOnly = false;
-                WriteVersion(CLIENT_VERSION);
+                Write(std::string("version"), CLIENT_VERSION);
                 fReadOnly = fTmp;
             }
         }
@@ -608,7 +604,9 @@ void BerkeleyBatch::Flush()
     if (fReadOnly)
         nMinutes = 1;
 
-    env->dbenv->txn_checkpoint(nMinutes ? gArgs.GetArg("-dblogsize", DEFAULT_WALLET_DBLOGSIZE) * 1024 : 0, nMinutes, 0);
+    if (env) { // env is nullptr for dummy databases (i.e. in tests). Don't actually flush if env is nullptr so we don't segfault
+        env->dbenv->txn_checkpoint(nMinutes ? gArgs.GetArg("-dblogsize", DEFAULT_WALLET_DBLOGSIZE) * 1024 : 0, nMinutes, 0);
+    }
 }
 
 void BerkeleyDatabase::IncrementUpdateCounter()

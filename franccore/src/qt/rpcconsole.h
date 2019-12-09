@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_QT_RPCCONSOLE_H
-#define FRANC_QT_RPCCONSOLE_H
+#ifndef BITCOIN_QT_RPCCONSOLE_H
+#define BITCOIN_QT_RPCCONSOLE_H
 
 #include <qt/guiutil.h>
 #include <qt/peertablemodel.h>
@@ -32,7 +32,7 @@ class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
-/** Local franc RPC console. */
+/** Local Bitcoin RPC console. */
 class RPCConsole: public QWidget
 {
     Q_OBJECT
@@ -67,7 +67,6 @@ public:
 
     std::vector<TabTypes> tabs() const { return {TAB_INFO, TAB_CONSOLE, TAB_GRAPH, TAB_PEERS}; }
 
-    TabTypes tabFocus() const;
     QString tabTitle(TabTypes tab_type) const;
 
 protected:
@@ -168,6 +167,9 @@ private:
 
     /** Update UI with latest network info from model. */
     void updateNetworkState();
+
+private Q_SLOTS:
+    void updateAlerts(const QString& warnings);
 };
 
-#endif // FRANC_QT_RPCCONSOLE_H
+#endif // BITCOIN_QT_RPCCONSOLE_H

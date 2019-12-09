@@ -1,11 +1,9 @@
-// Copyright (c) 2009-2019 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The Franc Core developers
-
+// Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_RPC_REGISTER_H
-#define FRANC_RPC_REGISTER_H
+#ifndef BITCOIN_RPC_REGISTER_H
+#define BITCOIN_RPC_REGISTER_H
 
 /** These are in one header file to avoid creating tons of single-function
  * headers for everything under src/rpc/ */
@@ -31,4 +29,4 @@ static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
     RegisterRawTransactionRPCCommands(t);
 }
 
-#endif // FRANC_RPC_REGISTER_H
+#endif // BITCOIN_RPC_REGISTER_H

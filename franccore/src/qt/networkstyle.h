@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FRANC_QT_NETWORKSTYLE_H
-#define FRANC_QT_NETWORKSTYLE_H
+#ifndef BITCOIN_QT_NETWORKSTYLE_H
+#define BITCOIN_QT_NETWORKSTYLE_H
 
 #include <QIcon>
 #include <QPixmap>
@@ -14,7 +14,7 @@ class NetworkStyle
 {
 public:
     /** Get style associated with provided BIP70 network id, or 0 if not known */
-    static const NetworkStyle *instantiate(const QString &networkId);
+    static const NetworkStyle* instantiate(const std::string& networkId);
 
     const QString &getAppName() const { return appName; }
     const QIcon &getAppIcon() const { return appIcon; }
@@ -30,4 +30,4 @@ private:
     QString titleAddText;
 };
 
-#endif // FRANC_QT_NETWORKSTYLE_H
+#endif // BITCOIN_QT_NETWORKSTYLE_H

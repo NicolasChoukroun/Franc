@@ -1,4 +1,4 @@
-Fuzz-testing Franc
+Fuzz-testing Bitcoin Core
 ==========================
 
 A special test harness in `src/test/fuzz/` is provided for each fuzz target to
@@ -17,7 +17,7 @@ Extract the example seeds (or other starting inputs) into the inputs
 directory before starting fuzzing.
 
 ```
-git clone https://github.com/franc-core/qa-assets
+git clone https://github.com/bitcoin-core/qa-assets
 export DIR_FUZZ_IN=$PWD/qa-assets/fuzz_seed_corpus
 ```
 
@@ -43,10 +43,10 @@ export AFLPATH=$PWD
 
 ### Instrumentation
 
-To build Franc using AFL instrumentation (this assumes that the
+To build Bitcoin Core using AFL instrumentation (this assumes that the
 `AFLPATH` was set as above):
 ```
-./configure --disable-ccache --disable-shared --enable-tests --enable-fuzz --disable-wallet --disable-bench --with-utils=no --with-daemon=no --with-libs=no --with-gui=no CC=${AFLPATH}/afl-gcc CXX=${AFLPATH}/afl-g++
+./configure --disable-ccache --disable-shared --enable-tests --enable-fuzz CC=${AFLPATH}/afl-gcc CXX=${AFLPATH}/afl-g++
 export AFL_HARDEN=1
 cd src/
 make
@@ -83,7 +83,7 @@ found in the `compiler-rt` runtime libraries package).
 To build all fuzz targets with libFuzzer, run
 
 ```
-./configure --disable-ccache --disable-wallet --disable-bench --with-utils=no --with-daemon=no --with-libs=no --with-gui=no --enable-fuzz --with-sanitizers=fuzzer,address CC=clang CXX=clang++
+./configure --disable-ccache --enable-fuzz --with-sanitizers=fuzzer,address CC=clang CXX=clang++
 make
 ```
 

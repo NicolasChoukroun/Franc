@@ -66,12 +66,12 @@
         <translation>收款位址</translation>
     </message>
     <message>
-        <source>These are your franc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>這些是你要付款過去的 franc 位址。在付錢之前，務必要檢查金額和收款位址是否正確。</translation>
+        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>這些是你要付款過去的 Bitcoin 位址。在付錢之前，務必要檢查金額和收款位址是否正確。</translation>
     </message>
     <message>
-        <source>These are your franc addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>這些是你用來收款的 franc 位址。建議在每次交易時，都使用一個新的收款位址。</translation>
+        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
+        <translation>這些是您用於接收付款的比特幣位址。 使用接收分頁中的"生成新接收位址"按鈕創建新的位置。</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -136,14 +136,6 @@
         <translation>重複新密碼</translation>
     </message>
     <message>
-        <source>Show password</source>
-        <translation>顯示密碼</translation>
-    </message>
-    <message>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation>輸入錢包的新密碼。&lt;br/&gt;密碼請用&lt;b&gt;10 個以上的隨機字元&lt;/b&gt;，或是&lt;b&gt;8 個以上的字詞&lt;/b&gt;。</translation>
-    </message>
-    <message>
         <source>Encrypt wallet</source>
         <translation>加密錢包</translation>
     </message>
@@ -168,16 +160,12 @@
         <translation>改變密碼</translation>
     </message>
     <message>
-        <source>Enter the old passphrase and new passphrase to the wallet.</source>
-        <translation>請輸入錢包的舊密碼和新密碼。</translation>
-    </message>
-    <message>
         <source>Confirm wallet encryption</source>
         <translation>確認錢包加密</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FRANCS&lt;/b&gt;!</source>
-        <translation>警告: 如果把錢包加密後又忘記密碼，你就會從此&lt;b&gt;失去其中所有的 franc 了&lt;/b&gt;！</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <translation>警告: 如果把錢包加密後又忘記密碼，你就會從此&lt;b&gt;失去其中所有的 Bitcoin 了&lt;/b&gt;！</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +176,8 @@
         <translation>錢包已加密</translation>
     </message>
     <message>
-        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your francs from being stolen by malware infecting your computer.</source>
-        <translation>錢包已經加密了。請注意，加密錢包不能完全防止入侵你的電腦的惡意程式偷取錢幣。</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <translation>請記得, 即使將錢包加密, 也不能完全防止因惡意軟體入侵, 而導致位元幣被偷.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -240,7 +228,7 @@
     </message>
 </context>
 <context>
-    <name>francGUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>簽署訊息(&amp;M)...</translation>
@@ -342,8 +330,8 @@
         <translation>代理伺服器&lt;b&gt;已經啟用&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a franc address</source>
-        <translation>付錢給一個 franc 位址</translation>
+        <source>Send coins to a Bitcoin address</source>
+        <translation>付錢給一個 Bitcoin 位址</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,10 +354,6 @@
         <translation>驗證訊息(&amp;V)...</translation>
     </message>
     <message>
-        <source>franc</source>
-        <translation>franc</translation>
-    </message>
-    <message>
         <source>&amp;Send</source>
         <translation>付款(&amp;S)</translation>
     </message>
@@ -390,12 +374,12 @@
         <translation>把錢包中的密鑰加密</translation>
     </message>
     <message>
-        <source>Sign messages with your franc addresses to prove you own them</source>
-        <translation>用 franc 位址簽署訊息來證明位址是你的</translation>
+        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <translation>用 Bitcoin 位址簽署訊息來證明位址是你的</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified franc addresses</source>
-        <translation>驗證訊息是用來確定訊息是用指定的 franc 位址簽署的</translation>
+        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+        <translation>驗證訊息是用來確定訊息是用指定的 Bitcoin 位址簽署的</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -414,8 +398,8 @@
         <translation>分頁工具列</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and franc: URIs)</source>
-        <translation>要求付款(產生 QR Code 和 franc 付款協議的資源識別碼: URI)</translation>
+        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <translation>要求付款(產生 QR Code 和 bitcoin 付款協議的資源識別碼: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -426,16 +410,16 @@
         <translation>顯示已使用過的收款位址和標記的清單</translation>
     </message>
     <message>
-        <source>Open a franc: URI or payment request</source>
-        <translation>開啓 franc 協議的資源識別碼(URI)或付款要求</translation>
+        <source>Open a bitcoin: URI or payment request</source>
+        <translation>開啓 bitcoin 協議的資源識別碼(URI)或付款要求</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>命令列選項(&amp;C)</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to franc network</source>
-        <translation><numerusform>%n 個運作中的 franc 網路連線</numerusform></translation>
+        <source>%n active connection(s) to Bitcoin network</source>
+        <translation><numerusform>%n 個運作中的 Bitcoin 網路連線</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -502,7 +486,7 @@
         <translation>關上錢包</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible franc command-line options</source>
+        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
         <translation>顯示 %1 的說明訊息，來取得可用命令列選項的列表</translation>
     </message>
     <message>
@@ -510,12 +494,8 @@
         <translation>預設錢包</translation>
     </message>
     <message>
-        <source>Opening Wallet &lt;b&gt;%1&lt;/b&gt;...</source>
-        <translation>正在開啟錢包檔&lt;b&gt;%1&lt;/b&gt;中...</translation>
-    </message>
-    <message>
-        <source>Open Wallet Failed</source>
-        <translation>打開錢包失敗了</translation>
+        <source>No wallets available</source>
+        <translation>没有可用的钱包</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -524,6 +504,14 @@
     <message>
         <source>Minimize</source>
         <translation>縮小</translation>
+    </message>
+    <message>
+        <source>Zoom</source>
+        <translation>缩放</translation>
+    </message>
+    <message>
+        <source>Main Window</source>
+        <translation>主窗口</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -536,6 +524,14 @@
     <message>
         <source>Catching up...</source>
         <translation>正在趕進度...</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>错误：%1</translation>
+    </message>
+    <message>
+        <source>Warning: %1</source>
+        <translation>警告：%1</translation>
     </message>
     <message>
         <source>Date: %1
@@ -590,6 +586,10 @@
         <translation>產生 HD 金鑰&lt;b&gt;已經停用&lt;/b&gt;</translation>
     </message>
     <message>
+        <source>Private key &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>私钥&lt;b&gt;禁用&lt;/b&gt;</translation>
+    </message>
+    <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>錢包&lt;b&gt;已加密&lt;/b&gt;並且&lt;b&gt;解鎖中&lt;/b&gt;</translation>
     </message>
@@ -598,8 +598,8 @@
         <translation>錢包&lt;b&gt;已加密&lt;/b&gt;並且&lt;b&gt;上鎖中&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. franc can no longer continue safely and will quit.</source>
-        <translation>發生了致命的錯誤。franc 軟體沒辦法再繼續安全執行，只好結束。</translation>
+        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
+        <translation>發生了致命的錯誤。Bitcoin 軟體沒辦法再繼續安全執行，只好結束。</translation>
     </message>
 </context>
 <context>
@@ -754,6 +754,12 @@
     </message>
 </context>
 <context>
+    <name>CreateWalletActivity</name>
+    </context>
+<context>
+    <name>CreateWalletDialog</name>
+    </context>
+<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -788,8 +794,8 @@
         <translation>編輯付款位址</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid franc address.</source>
-        <translation>輸入的位址 %1 並不是有效的 franc 位址。</translation>
+        <source>The entered address "%1" is not a valid Bitcoin address.</source>
+        <translation>輸入的位址 %1 並不是有效的 Bitcoin 位址。</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -885,8 +891,8 @@
         <translation>使用自訂的資料目錄:</translation>
     </message>
     <message>
-        <source>franc</source>
-        <translation>franc</translation>
+        <source>Bitcoin</source>
+        <translation>Bitcoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -897,8 +903,8 @@
         <translation>在這個目錄中大約會存放 %1 GB 的資料。</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the franc block chain.</source>
-        <translation>%1 會下載 franc 區塊鏈並且儲存一份副本。</translation>
+        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
+        <translation>%1 會下載 Bitcoin 區塊鏈並且儲存一份副本。</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -920,7 +926,7 @@
         <source>(of %n GB needed)</source>
         <translation><numerusform>(需要 %n GB)</numerusform></translation>
     </message>
-</context>
+    </context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -928,12 +934,12 @@
         <translation>表單</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the franc network, as detailed below.</source>
-        <translation>最近的交易可能還看不到，因此錢包餘額可能不正確。在錢包軟體完成跟 franc 網路的同步後，這裡的資訊就會正確。詳情請見下面。</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <translation>最近的交易可能還看不到，因此錢包餘額可能不正確。在錢包軟體完成跟 bitcoin 網路的同步後，這裡的資訊就會正確。詳情請見下面。</translation>
     </message>
     <message>
-        <source>Attempting to spend francs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>使用還沒顯示出來的交易所影響到的 franc 可能會不被網路所接受。</translation>
+        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>使用還沒顯示出來的交易所影響到的 bitcoin 可能會不被網路所接受。</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -996,6 +1002,17 @@
     </message>
 </context>
 <context>
+    <name>OpenWalletActivity</name>
+    <message>
+        <source>default wallet</source>
+        <translation>默认钱包</translation>
+    </message>
+    <message>
+        <source>Opening Wallet &lt;b&gt;%1&lt;/b&gt;...</source>
+        <translation>正在打开钱包&lt;b&gt;%1&lt;/b&gt;...</translation>
+    </message>
+</context>
+<context>
     <name>OptionsDialog</name>
     <message>
         <source>Options</source>
@@ -1031,7 +1048,7 @@
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor hidden services:</source>
-        <translation>透過另外的 SOCKS&amp;5 代理伺服器來連線到 franc 網路中的 Tor 隱藏服務:</translation>
+        <translation>透過另外的 SOCKS&amp;5 代理伺服器來連線到 Bitcoin 網路中的 Tor 隱藏服務:</translation>
     </message>
     <message>
         <source>Hide the icon from the system tray.</source>
@@ -1086,6 +1103,10 @@
         <translation>把這個設定改回來會需要重新下載整個區塊鏈。</translation>
     </message>
     <message>
+        <source>MiB</source>
+        <translation>MiB</translation>
+    </message>
+    <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
         <translation>(0 表示程式自動決定，小於 0 表示保留處理器核心不用的數目)</translation>
     </message>
@@ -1110,8 +1131,8 @@
         <translation>可以花還沒確認的零錢(&amp;S)</translation>
     </message>
     <message>
-        <source>Automatically open the franc client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自動在路由器上開放 franc 的客戶端通訊埠。只有在你的路由器支援且開啓「通用即插即用」協定(UPnP)時才有作用。</translation>
+        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>自動在路由器上開放 Bitcoin 的客戶端通訊埠。只有在你的路由器支援且開啓「通用即插即用」協定(UPnP)時才有作用。</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1126,8 +1147,8 @@
         <translation>接受外來連線(&amp;G)</translation>
     </message>
     <message>
-        <source>Connect to the franc network through a SOCKS5 proxy.</source>
-        <translation>透過 SOCKS5 代理伺服器來連線到 franc 網路。</translation>
+        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
+        <translation>透過 SOCKS5 代理伺服器來連線到 Bitcoin 網路。</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1162,8 +1183,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the franc network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>透過另外的 SOCKS5 代理伺服器來連線到 franc 網路中的 Tor 隱藏服務。</translation>
+        <source>Connect to the Bitcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>透過另外的 SOCKS5 代理伺服器來連線到 Bitcoin 網路中的 Tor 隱藏服務。</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1208,6 +1229,10 @@
     <message>
         <source>&amp;Third party transaction URLs</source>
         <translation>第三方交易網址連結(&amp;T)</translation>
+    </message>
+    <message>
+        <source>Options set in this dialog are overridden by the command line or in the configuration file:</source>
+        <translation>这个对话框中的设置已被如下命令行选项或配置文件项覆盖：</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -1269,8 +1294,8 @@
         <translation>表單</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the franc network after a connection is established, but this process has not completed yet.</source>
-        <translation>顯示的資訊可能是過期的。跟 franc 網路的連線建立後，你的錢包會自動和網路同步，但是這個步驟還沒完成。</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>顯示的資訊可能是過期的。跟 Bitcoin 網路的連線建立後，你的錢包會自動和網路同步，但是這個步驟還沒完成。</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1344,28 +1369,36 @@
         <translation>要求付款時發生錯誤</translation>
     </message>
     <message>
-        <source>Cannot start franc: click-to-pay handler</source>
-        <translation>沒辦法啟動 franc 協議的「按就付」處理器</translation>
+        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <translation>沒辦法啟動 bitcoin 協議的「按就付」處理器</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI 處理</translation>
     </message>
     <message>
-        <source>'franc://' is not a valid URI. Use 'franc:' instead.</source>
-        <translation>字首為 franc:// 不是有效的 URI，請改用 franc: 開頭。</translation>
+        <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
+        <translation>字首為 bitcoin:// 不是有效的 URI，請改用 bitcoin: 開頭。</translation>
+    </message>
+    <message>
+        <source>You are using a BIP70 URL which will be unsupported in the future.</source>
+        <translation>你正在使用BIP70 URL，它在未来会被终止支持。</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
         <translation>取得付款要求的 URL 無效: %1</translation>
     </message>
     <message>
+        <source>Cannot process payment request because BIP70 support was not compiled in.</source>
+        <translation>无法处理支付请求，因为编译时没有启用BIP70支持。</translation>
+    </message>
+    <message>
         <source>Invalid payment address %1</source>
         <translation>無效的付款位址 %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid franc address or malformed URI parameters.</source>
-        <translation>沒辦法解析 URI 位址！可能是因為 franc 位址無效，或是 URI 參數格式錯誤。</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
+        <translation>沒辦法解析 URI 位址！可能是因為 Bitcoin 位址無效，或是 URI 參數格式錯誤。</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1466,8 +1499,8 @@
         <translation>金額</translation>
     </message>
     <message>
-        <source>Enter a franc address (e.g. %1)</source>
-        <translation>輸入 franc 位址 (比如說 %1)</translation>
+        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <translation>輸入 Bitcoin 位址 (比如說 %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1542,31 +1575,24 @@
         <translation>%1 GB (十億位元組)</translation>
     </message>
     <message>
+        <source>Error: Specified data directory "%1" does not exist.</source>
+        <translation>错误：指定的数据目录“%1”不存在。</translation>
+    </message>
+    <message>
+        <source>Error: Cannot parse configuration file: %1.</source>
+        <translation>错误：无法解析配置文件：%1</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>错误：%1</translation>
+    </message>
+    <message>
         <source>%1 didn't yet exit safely...</source>
         <translation>%1 還沒有安全地結束...</translation>
     </message>
     <message>
         <source>unknown</source>
         <translation>未知</translation>
-    </message>
-</context>
-<context>
-    <name>QObject::QObject</name>
-    <message>
-        <source>Error parsing command line arguments: %1.</source>
-        <translation>解析命令列參數 %1 時發生錯誤。</translation>
-    </message>
-    <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>錯誤: 不存在指定的資料目錄 "%1" 。</translation>
-    </message>
-    <message>
-        <source>Error: Cannot parse configuration file: %1.</source>
-        <translation>錯誤: 沒辦法解析設定檔: %1。</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>錯誤: %1</translation>
     </message>
 </context>
 <context>
@@ -1578,6 +1604,18 @@
     <message>
         <source>&amp;Copy Image</source>
         <translation>複製圖片(&amp;C)</translation>
+    </message>
+    <message>
+        <source>Resulting URI too long, try to reduce the text for label / message.</source>
+        <translation>URI 太长，请试着精简标签或消息文本。</translation>
+    </message>
+    <message>
+        <source>Error encoding URI into QR Code.</source>
+        <translation>把 URI 编码成二维码时发生错误。</translation>
+    </message>
+    <message>
+        <source>QR code support not available.</source>
+        <translation>不支援QR code</translation>
     </message>
     <message>
         <source>Save QR Code</source>
@@ -1617,6 +1655,18 @@
     <message>
         <source>Datadir</source>
         <translation>資料目錄</translation>
+    </message>
+    <message>
+        <source>To specify a non-default location of the data directory use the '%1' option.</source>
+        <translation>如果不想用默认的数据目录位置，请用 '%1' 这个选项来指定新的位置。</translation>
+    </message>
+    <message>
+        <source>Blocksdir</source>
+        <translation>区块存储目录</translation>
+    </message>
+    <message>
+        <source>To specify a non-default location of the blocks directory use the '%1' option.</source>
+        <translation>如果要自定义区块存储目录的位置，请用 '%1' 这个选项来指定新的位置。</translation>
     </message>
     <message>
         <source>Startup time</source>
@@ -1910,8 +1960,8 @@
         <translation>訊息(&amp;M):</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the franc network.</source>
-        <translation>附加在付款要求中的訊息，可以不填，打開要求內容時會顯示。注意: 這個訊息不會隨著付款送到 franc 網路上。</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
+        <translation>附加在付款要求中的訊息，可以不填，打開要求內容時會顯示。注意: 這個訊息不會隨著付款送到 Bitcoin 網路上。</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1924,6 +1974,10 @@
     <message>
         <source>An optional amount to request. Leave this empty or zero to not request a specific amount.</source>
         <translation>要求付款的金額，可以不填。不確定金額時可以留白或是填零。</translation>
+    </message>
+    <message>
+        <source>&amp;Create new receiving address</source>
+        <translation>&amp;生成新的接收位址</translation>
     </message>
     <message>
         <source>Clear all fields of the form.</source>
@@ -1944,10 +1998,6 @@
     <message>
         <source>Requested payments history</source>
         <translation>先前要求付款的記錄</translation>
-    </message>
-    <message>
-        <source>&amp;Request payment</source>
-        <translation>要求付款(&amp;R)</translation>
     </message>
     <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
@@ -2031,14 +2081,6 @@
     <message>
         <source>Wallet</source>
         <translation>錢包</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>產生的 URI 過長，請試著縮短標記或訊息的文字內容。</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>把 URI 編碼成 QR Code 時發生錯誤。</translation>
     </message>
 </context>
 <context>
@@ -2191,6 +2233,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>零散錢:</translation>
     </message>
     <message>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
+        <translation>当交易量小于可用区块空间时，矿工和中继节点可能会执行最低手续费率限制。按照这个最低费率来支付手续费也是可以的，但请注意，一旦交易需求超出比特币网络能处理的限度，你的交易可能永远也无法确认。</translation>
+    </message>
+    <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
         <translation>手續費太低的話可能會造成永遠無法確認的交易(請參考提示)</translation>
     </message>
@@ -2255,6 +2301,14 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>%1 (%2 個區塊)</translation>
     </message>
     <message>
+        <source> from wallet '%1'</source>
+        <translation>從錢包 %1</translation>
+    </message>
+    <message>
+        <source>%1 to '%2'</source>
+        <translation>%1 到 '%2'</translation>
+    </message>
+    <message>
         <source>%1 to %2</source>
         <translation>%1 給 %2</translation>
     </message>
@@ -2271,10 +2325,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>你可以之後再提高手續費(有 BIP-125 手續費追加的標記)</translation>
     </message>
     <message>
-        <source>from wallet %1</source>
-        <translation>從錢包 %1</translation>
-    </message>
-    <message>
         <source>Please, review your transaction.</source>
         <translation>請再次確認交易內容。</translation>
     </message>
@@ -2289,6 +2339,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Total Amount</source>
         <translation>總金額</translation>
+    </message>
+    <message>
+        <source>To review recipient list click "Show Details..."</source>
+        <translation>要查看收件人列表，請單擊"顯示詳細訊息..."</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
@@ -2330,9 +2384,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <source>Payment request expired.</source>
         <translation>付款的要求過期了。</translation>
     </message>
+    <message numerus="yes">
+        <source>Estimated to begin confirmation within %n block(s).</source>
+        <translation><numerusform>预计在等待 %n 个区块后会有第一个确认。</numerusform></translation>
+    </message>
     <message>
-        <source>Warning: Invalid franc address</source>
-        <translation>警告: franc 位址無效</translation>
+        <source>Warning: Invalid Bitcoin address</source>
+        <translation>警告: Bitcoin 位址無效</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2374,8 +2432,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>這是一筆正常的付款。</translation>
     </message>
     <message>
-        <source>The franc address to send the payment to</source>
-        <translation>接收付款的 franc 位址</translation>
+        <source>The Bitcoin address to send the payment to</source>
+        <translation>接收付款的 Bitcoin 位址</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2394,8 +2452,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>刪掉這個項目</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less francs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>手續費會從要付款出去的金額中扣掉。因此收款人會收到比輸入的金額還要少的 franc。如果有多個收款人的話，手續費會平均分配來扣除。</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>手續費會從要付款出去的金額中扣掉。因此收款人會收到比輸入的金額還要少的 bitcoin。如果有多個收款人的話，手續費會平均分配來扣除。</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2422,8 +2480,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>請輸入這個位址的標記，來把它加進去已使用過位址的清單。</translation>
     </message>
     <message>
-        <source>A message that was attached to the franc: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the franc network.</source>
-        <translation>附加在 franc 付款協議的資源識別碼(URI)中的訊息，會和交易內容一起存起來，給你自己做參考。注意: 這個訊息不會送到 franc 網路上。</translation>
+        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>附加在 Bitcoin 付款協議的資源識別碼(URI)中的訊息，會和交易內容一起存起來，給你自己做參考。注意: 這個訊息不會送到 Bitcoin 網路上。</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2453,7 +2511,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
-        <translation> 在這個視窗不見以前，請不要關掉電腦。</translation>
+        <translation>在這個視窗不見以前，請不要關掉電腦。</translation>
     </message>
 </context>
 <context>
@@ -2467,12 +2525,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>簽署訊息(&amp;S)</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive francs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>你可以用自己的位址簽署訊息或合約，來證明你可以從該位址收款。但是請小心，不要簽署語意含糊不清，或隨機產生的內容，因為釣魚式詐騙可能會用騙你簽署的手法來冒充是你。只有在語句中的細節你都同意時才簽署。</translation>
     </message>
     <message>
-        <source>The franc address to sign the message with</source>
-        <translation>用來簽署訊息的 franc 位址</translation>
+        <source>The Bitcoin address to sign the message with</source>
+        <translation>用來簽署訊息的 Bitcoin 位址</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2503,8 +2561,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>複製目前的簽章到系統剪貼簿</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this franc address</source>
-        <translation>簽署這個訊息來證明這個 franc 位址是你的</translation>
+        <source>Sign the message to prove you own this Bitcoin address</source>
+        <translation>簽署這個訊息來證明這個 Bitcoin 位址是你的</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2527,12 +2585,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>請在下面輸入收款人的位址，訊息(請確定完整複製了所包含的換行，空格，跳位符號等等)，以及簽章，來驗證這個訊息。請小心，除了訊息內容以外，不要對簽章本身過度解讀，以避免被用「中間人攻擊法」詐騙。請注意，通過驗證的簽章只能證明簽章人確實可以從該位址收款，不能證明任何交易中的付款人身份！</translation>
     </message>
     <message>
-        <source>The franc address the message was signed with</source>
-        <translation>簽署這個訊息的 franc 位址</translation>
+        <source>The Bitcoin address the message was signed with</source>
+        <translation>簽署這個訊息的 Bitcoin 位址</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified franc address</source>
-        <translation>驗證這個訊息來確定是用指定的 franc 位址簽署的</translation>
+        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
+        <translation>驗證這個訊息來確定是用指定的 Bitcoin 位址簽署的</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2593,13 +2651,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Message verified.</source>
         <translation>訊息驗證沒錯。</translation>
-    </message>
-</context>
-<context>
-    <name>SplashScreen</name>
-    <message>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
     </message>
 </context>
 <context>
@@ -3067,10 +3118,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>關閉錢包</translation>
     </message>
     <message>
-        <source>Are you sure you wish to close wallet &lt;i&gt;%1&lt;/i&gt;?</source>
-        <translation>確定要關上錢包&lt;i&gt;%1&lt;/i&gt;嗎？</translation>
-    </message>
-    <message>
         <source>Closing the wallet for too long can result in having to resync the entire chain if pruning is enabled.</source>
         <translation>關上錢包太久的話且修剪模式又有開啟的話，可能會造成日後需要重新同步整個區塊鏈。</translation>
     </message>
@@ -3169,7 +3216,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
 </context>
 <context>
-    <name>franc-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>依據 MIT 軟體授權條款散布，詳情請見附帶的 %s 檔案或是 %s</translation>
@@ -3199,12 +3246,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>無法啟動 HTTP 伺服器。詳情請看除錯紀錄。</translation>
     </message>
     <message>
-        <source>franc Core</source>
-        <translation>franc Core</translation>
-    </message>
-    <message>
         <source>The %s developers</source>
         <translation>%s 開發人員</translation>
+    </message>
+    <message>
+        <source>Can't generate a change-address key. No keys in the internal keypool and can't generate any keys.</source>
+        <translation>无法生成找零地址密钥。 内部密钥池中没有密钥，也无法生成任何密钥。</translation>
     </message>
     <message>
         <source>Cannot obtain a lock on data directory %s. %s is probably already running.</source>
@@ -3275,6 +3322,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>找零的索引值超出範圍</translation>
     </message>
     <message>
+        <source>Config setting for %s only applied on %s network when in [%s] section.</source>
+        <translation>对 %s 的配置设置只对 %s 网络生效，如果它位于配置的 [%s] 章节的话</translation>
+    </message>
+    <message>
         <source>Copyright (C) %i-%i</source>
         <translation>版權所有 (C) %i-%i</translation>
     </message>
@@ -3319,10 +3370,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>打開區塊資料庫時發生錯誤</translation>
     </message>
     <message>
-        <source>Error: Disk space is low!</source>
-        <translation>錯誤: 磁碟空間很少！</translation>
-    </message>
-    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>在任意的通訊埠聽候失敗。如果你希望這樣的話，可以設定 -listen=0.</translation>
     </message>
@@ -3343,6 +3390,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>初始化時的基本檢查失敗了。%s 就要關閉了。</translation>
     </message>
     <message>
+        <source>Invalid P2P permission: '%s'</source>
+        <translation>無效的 P2P 權限: '%s'</translation>
+    </message>
+    <message>
         <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
         <translation>參數 -%s=&lt;金額&gt; 指定的金額無效: '%s'</translation>
     </message>
@@ -3359,12 +3410,24 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>指定的區塊目錄 "%s" 不存在。</translation>
     </message>
     <message>
+        <source>Unknown address type '%s'</source>
+        <translation>不明的位址類型 '%s'</translation>
+    </message>
+    <message>
+        <source>Unknown change type '%s'</source>
+        <translation>不明的找零位址類型 '%s'</translation>
+    </message>
+    <message>
         <source>Upgrading txindex database</source>
         <translation>正在升級 txindex 資料庫</translation>
     </message>
     <message>
         <source>Loading P2P addresses...</source>
         <translation>正在載入 P2P 位址資料...</translation>
+    </message>
+    <message>
+        <source>Error: Disk space is too low!</source>
+        <translation>錯誤: 磁碟空間很少！</translation>
     </message>
     <message>
         <source>Loading banlist...</source>
@@ -3451,8 +3514,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>升級區塊鏈狀態資料庫時發生錯誤</translation>
     </message>
     <message>
-        <source>Information</source>
-        <translation>資訊</translation>
+        <source>Error: Disk space is low for %s</source>
+        <translation>错误： %s 所在的磁盘空间低。</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3475,8 +3538,16 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>指定 -whitebind 時必須包含通訊埠: '%s'</translation>
     </message>
     <message>
+        <source>Prune mode is incompatible with -blockfilterindex.</source>
+        <translation>修剪模式與 -blockfilterindex不相容。</translation>
+    </message>
+    <message>
         <source>Reducing -maxconnections from %d to %d, because of system limitations.</source>
         <translation>因為系統的限制，將 -maxconnections 參數從 %d 降到了 %d</translation>
+    </message>
+    <message>
+        <source>Section [%s] is not recognized.</source>
+        <translation>无法识别配置章节 [%s]。</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -3495,6 +3566,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>以 -walletdir 指定的路徑 "%s" 不是個目錄</translation>
     </message>
     <message>
+        <source>The specified config file %s does not exist
+</source>
+        <translation>指定的配置文件 %s 不存在
+</translation>
+    </message>
+    <message>
         <source>The transaction amount is too small to pay the fee</source>
         <translation>交易金額太少而付不起手續費</translation>
     </message>
@@ -3507,10 +3584,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>交易金額太小</translation>
     </message>
     <message>
-        <source>Transaction too large for fee policy</source>
-        <translation>根據交易手續費準則，本交易的位元量過大</translation>
-    </message>
-    <message>
         <source>Transaction too large</source>
         <translation>交易位元量太大</translation>
     </message>
@@ -3519,20 +3592,20 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>無法和這台電腦上的 %s 繫結(回傳錯誤 %s)</translation>
     </message>
     <message>
+        <source>Unable to create the PID file '%s': %s</source>
+        <translation>无法创建PID文件'%s': %s</translation>
+    </message>
+    <message>
         <source>Unable to generate initial keys</source>
         <translation>無法產生初始的密鑰</translation>
     </message>
     <message>
+        <source>Unknown -blockfilterindex value %s.</source>
+        <translation>未知 -blockfilterindex 數值 %s.</translation>
+    </message>
+    <message>
         <source>Verifying wallet(s)...</source>
         <translation>正在驗證錢包資料...</translation>
-    </message>
-    <message>
-        <source>Wallet %s resides outside wallet directory %s</source>
-        <translation>錢包檔 %s 沒有在錢包目錄 %s 裡面</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>警告</translation>
     </message>
     <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
@@ -3569,10 +3642,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>載入錢包檔 %s 失敗。-wallet 參數指定了重複的檔名。</translation>
-    </message>
-    <message>
-        <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>密鑰池已經乾了，請先執行 keypoolrefill</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3645,10 +3714,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Done loading</source>
         <translation>載入完成</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>錯誤</translation>
     </message>
 </context>
 </TS>

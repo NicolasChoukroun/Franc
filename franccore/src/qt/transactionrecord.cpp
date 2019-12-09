@@ -5,11 +5,9 @@
 #include <qt/transactionrecord.h>
 
 #include <chain.h>
-#include <consensus/consensus.h>
 #include <interfaces/wallet.h>
 #include <key_io.h>
-#include <timedata.h>
-#include <validation.h>
+#include <wallet/ismine.h>
 
 #include <stdint.h>
 
@@ -55,7 +53,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const interface
                 sub.involvesWatchAddress = mine & ISMINE_WATCH_ONLY;
                 if (wtx.txout_address_is_mine[i])
                 {
-                    // Received by franc Address
+                    // Received by Bitcoin Address
                     sub.type = TransactionRecord::RecvWithAddress;
                     sub.address = EncodeDestination(wtx.txout_address[i]);
                 }
@@ -124,7 +122,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const interface
 
                 if (!boost::get<CNoDestination>(&wtx.txout_address[nOut]))
                 {
-                    // Sent to franc Address
+                    // Sent to Bitcoin Address
                     sub.type = TransactionRecord::SendToAddress;
                     sub.address = EncodeDestination(wtx.txout_address[nOut]);
                 }
