@@ -1021,7 +1021,7 @@ bool AppInitParameterInteraction()
 #endif
         }
         if (version_string.compare((char *)response.body.data())!= 0) {
-            InitWarning(strprintf(_("Incorrect version number, please update your wallet to the latest version.\nVersion current: %s\nThis Wallet: %s"),  response.body.data(),version_string));
+            InitWarning(strprintf(_("Incorrect version number, please update your wallet to the latest version.\nVersion current: %s\nThis Wallet: %s").translated,  response.body.data(),version_string));
             //exit(false);
         }
         std::cout << response.body.data() << std::endl; // print the result
@@ -1029,7 +1029,7 @@ bool AppInitParameterInteraction()
 
     }catch (const std::exception& e)
     {
-        InitWarning(strprintf(_("Check version: Cannot connect to server , request failed.\nError: %s"), e.what() ));
+        InitWarning(strprintf(_("Check version: Cannot connect to server , request failed.\nError: %s").translated, e.what() ));
         std::cerr << "Request failed, error: " << e.what() << std::endl;
     }
 

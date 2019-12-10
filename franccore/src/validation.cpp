@@ -3429,7 +3429,7 @@ static bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationSta
 
     // Check proof of work
     const Consensus::Params& consensusParams = params.GetConsensus();
-     if (block.nBits != GetNextWorkRequired(pindexPrev, &block, consensusParams) && nHeight>2000 && hHeight!=4710)
+     if (block.nBits != GetNextWorkRequired(pindexPrev, &block, consensusParams) && nHeight>2000 && nHeight!=4710)
         return state.Invalid(ValidationInvalidReason::BLOCK_INVALID_HEADER, false, REJECT_INVALID, "bad-diffbits", "incorrect proof of work");");
     }
 
@@ -3496,7 +3496,7 @@ static bool ContextualCheckBlock(const CBlock& block, CValidationState& state, c
         CScript expect = CScript() << nHeight;
         if (block.vtx[0]->vin[0].scriptSig.size() < expect.size() ||
             !std::equal(expect.begin(), expect.end(), block.vtx[0]->vin[0].scriptSig.begin())) {
-            , "block height mismatch in coinbase");
+            // return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID
         }
     }
 
