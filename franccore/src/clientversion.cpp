@@ -13,7 +13,7 @@
  * for both francd and franc-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Zobbi");
+const std::string CLIENT_NAME("Satoshi");
 
 /**
  * Client version number
@@ -42,11 +42,10 @@ const std::string CLIENT_NAME("Zobbi");
 #include <obj/build.h>
 #endif
 
-//! git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
-#define GIT_ARCHIVE 1
+//! git will put "#define GIT_ARCHIVE 1" on the next line inside archives. $Format:%n#define GIT_ARCHIVE 1$
 #ifdef GIT_ARCHIVE
-#define GIT_COMMIT_ID "742f7dd972fca3dd4a33cfff90bf901b71a687e7"
-#define GIT_COMMIT_DATE "Sat, 2 Mar 2019 14:23:51 +0100"
+#define GIT_COMMIT_ID "$Format:%H$"
+#define GIT_COMMIT_DATE "$Format:%cD$"
 #endif
 
 #define BUILD_DESC_WITH_SUFFIX(maj, min, rev, build, suffix) \
@@ -78,14 +77,6 @@ static std::string FormatVersion(int nVersion)
         return strprintf("%d.%d.%d.%d", nVersion / 1000000, (nVersion / 10000) % 100, (nVersion / 100) % 100, nVersion % 100);
 }
 
-std::string FormatFullVersion()
-{
-    char myStr[100]; // MAKE THIS BIG ENOUGH!
-    sprintf(myStr, "%s.%s", CLIENT_BUILD.c_str(), __DATE__);
-    std::string s=myStr;
-    return s;
-}
-
 /**
  * Format the subversion field according to BIP 14 spec (https://github.com/franc/bips/blob/master/bip-0014.mediawiki)
  */
@@ -104,4 +95,12 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
     }
     ss << "/";
     return ss.str();
+}
+
+std::string FormatFullVersion()
+{
+    char myStr[100]; // MAKE THIS BIG ENOUGH!
+    sprintf(myStr, "%s.%s", CLIENT_BUILD.c_str(), __DATE__);
+    std::string s=myStr;
+    return s;
 }
