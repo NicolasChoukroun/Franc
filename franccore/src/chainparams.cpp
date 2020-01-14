@@ -114,10 +114,10 @@ public:
         consensus.nSubsidyHalvingInterval = 525600/2.5;
 
         consensus.BIP16Exception = uint256S("0x000407e630c17ccf96bc4cf12bc78153956f8715bbd5c955a67af23fd0a3c013");
-        consensus.BIP34Height = 1; // optimization starting from 1;
+        consensus.BIP34Height = 40000; // optimization starting from 1;
         consensus.BIP34Hash = uint256S("0x000407e630c17ccf96bc4cf12bc78153956f8715bbd5c955a67af23fd0a3c013");
-        consensus.BIP65Height = 1; // optimization starting from 1; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
-        consensus.BIP65Height = 1; // optimization starting from 1; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
+        consensus.BIP65Height = 40000; // optimization starting from 1; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
+        consensus.BIP65Height = 40000; // optimization starting from 1; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
 
         //consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.powLimit=uint256S("0007ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
