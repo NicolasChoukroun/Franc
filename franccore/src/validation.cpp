@@ -3429,8 +3429,8 @@ static bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationSta
 
     // Check proof of work
     const Consensus::Params& consensusParams = params.GetConsensus();
-     if (block.nBits != GetNextWorkRequired(pindexPrev, &block, consensusParams) && nHeight>2000 && nHeight!=4710)
-        return state.Invalid(ValidationInvalidReason::BLOCK_INVALID_HEADER, false, REJECT_INVALID, "bad-diffbits", "incorrect proof of work");");
+     if (block.nBits != GetNextWorkRequired(pindexPrev, &block, consensusParams) && nHeight>2000 && nHeight!=4710 && nHeight!=36324) {
+        return state.Invalid(ValidationInvalidReason::BLOCK_INVALID_HEADER, false, REJECT_INVALID, "bad-diffbits", "incorrect proof of work");
     }
 
     // Check against checkpoints
