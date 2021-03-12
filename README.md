@@ -4,6 +4,8 @@ Franc is the main currency for a game / social networking platform codenamed W.O
 
 Website for Franc is here: https://franc.eu.com
 
+The Token is deployed here: https://tronscan.org/#/token20/THfTjR6aNpmDaavokHzix89X9cCFmh5z7c
+
 This token is largely inspired by the USDT token. It provides issuing, burning, blacklisting and an efficient migration system.
 
 Feel Free to use it for your own purpose and if you find a problem with the code please let me know.
